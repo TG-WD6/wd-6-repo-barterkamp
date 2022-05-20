@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <form>
+        <fieldset>
+          <legend>Persoonsgegevens</legend>
+          <!-- Volgens de HTML standaard is de p tag semantisch een logischere keuze dan een generieke div om de input fields onder elkaar te plaatsen: Each part of a form is considered a paragraph, and is typically separated from other parts using p elements zie: https://html.spec.whatwg.org/#writing-a-form's-user-interface -->
+          <p>
+            <label for="surname">Achternaam:</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              placeholder="achternaam"
+              required
+            />
+          </p>
+          <p>
+            <label for="name">Voornaam:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="voornaam"
+              required
+            />
+          </p>
+          <p>
+            <label for="date of birth">Geboortedatum:</label>
+            <input
+              type="date"
+              id="date of birth"
+              name="date of birth"
+              required
+            />
+          </p>
+          <p>
+            <label for="male">M:</label>
+            <input type="radio" id="male" name="sex" value="male" required />
+            <label for="female">V:</label>
+            <input
+              type="radio"
+              id="female"
+              name="sex"
+              value="female"
+              required
+            />
+          </p>
+          <p>
+            <label for="zipcode">Postcode:</label>
+            <input
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              placeholder="postcode"
+              required
+            />
+          </p>
+          <p>
+            <label for="address">Adres:</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="adres"
+              required
+            />
+          </p>
+        </fieldset>
+        <p>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </body>
+</html>
