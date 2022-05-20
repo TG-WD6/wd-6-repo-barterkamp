@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* universal selector */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        margin: 2rem;
+      }
+
+      /* Adjacent sibling selector */
+      h1 + p {
+        border: 5px dotted red;
+      }
+
+      /* attribute selector */
+      a[href="http://www.instagram.com/barterkamp"]
+      {
+        color: red;
+      }
+
+      /* direct child selector */
+      section > p {
+        background-color: green;
+      }
+
+      /* General Sibling Selector */
+      article p ~ p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Oefenen met Selectors</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+        libero dicta ab odit assumenda deserunt impedit qui doloremque minima
+        at.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum rerum
+        ratione fuga minima temporibus aliquam cupiditate omnis molestiae hic
+        autem quaerat commodi sunt quae ipsam, nam assumenda, culpa expedita.
+        Tempore!
+      </p>
+      <ul>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.techground.nl">Techgrounds</a></li>
+        <li><a href="http://www.instagram.com/barterkamp">Instagram</a></li>
+      </ul>
+    </section>
+    <article>
+      <p>Dit is een introductie op het article</p>
+      <h2>Dit is een article</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro qui
+        beatae molestias, temporibus veritatis, sint ducimus a dolore
+        praesentium animi ipsam accusantium ipsum? Esse perferendis veniam earum
+        cumque, ab modi?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+        mollitia quod. Sit tempora culpa neque eveniet doloribus eius. Voluptas
+        libero iure dolores temporibus doloremque magnam voluptatibus a sunt
+        eius beatae.
+      </p>
+    </article>
+  </body>
+</html>
