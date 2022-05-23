@@ -1,0 +1,7 @@
+Opdracht 1
+
+Wat zijn de eigenschappen van block boxes en inline boxes?
+
+Een inline box wordt net als een inline-element op dezelfde regel geplaatst, maar in tegenstelling tot een inline element kan de height en width van een inline-block element wel aangepast worden. 
+
+Block elementen beginnen altijd op een nieuwe regel en zijn bij default net zo breed als de pagina (tenzij de width wordt aangepast).
