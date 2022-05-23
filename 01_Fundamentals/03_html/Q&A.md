@@ -4,14 +4,15 @@ Hyper Text Markup Language. Het is een markup (opmaak) taal voor tekst en andere
 
 ## Hoe ziet de basis-structuur van HTML eruit?
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title></title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
+```
 
 ## 3. Wat is een anchor tag?
 
