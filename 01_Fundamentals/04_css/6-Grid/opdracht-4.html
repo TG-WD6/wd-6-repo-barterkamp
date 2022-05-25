@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 4</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        border: 1px solid black;
+      }
+
+      .sidebar {
+        background-color: #a7eb97;
+        grid-row: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="sidebar"><p>Sidebar</p></div>
+      <div class="article" id="article_1"><p>Article</p></div>
+      <div class="article" id="article_2"><p>Article</p></div>
+    </section>
+  </body>
+</html>
