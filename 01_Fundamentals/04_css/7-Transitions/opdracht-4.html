@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Opdracht 3</title>
+    <title>Opdracht 4</title>
 
     <style>
       h1 {
@@ -15,19 +15,12 @@
         padding: 5px;
         display: flex;
         flex-direction: column;
-      }
-
-      .container:hover .box {
-        margin-left: 90%;
-        background-color: red;
-      }
-
-      .container:hover .box1 {
-        border-radius: 50%;
-      }
-
-      .container:hover .box2 {
-        border-radius: 20px;
+        position: relative;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
       }
 
       .box {
@@ -37,35 +30,15 @@
         border: 1px solid black;
         width: 100px;
         height: 100px;
-        margin: 10px;
+        position: absolute;
       }
 
-      .box1,
-      .box2,
-      .box3,
-      .box4,
-      .box5 {
-        transition: margin-left, border-radius, background-color;
-      }
-
-      .box1 {
-        transition: 3s ease;
+      .container:hover .box2 {
+        transform: translateX(160px) translateY(-180px);
       }
 
       .box2 {
-        transition: 3s ease-in-out;
-      }
-
-      .box3 {
-        transition: 3s ease-out;
-      }
-
-      .box4 {
-        transition: 3s 250ms ease-in-out;
-      }
-
-      .box5 {
-        transition: 3s;
+        transition: transform 1s ease-out;
       }
     </style>
   </head>
@@ -75,8 +48,6 @@
       <div class="box box1">1</div>
       <div class="box box2">2</div>
       <div class="box box3">3</div>
-      <div class="box box4">4</div>
-      <div class="box box5">5</div>
     </div>
   </body>
 </html>
