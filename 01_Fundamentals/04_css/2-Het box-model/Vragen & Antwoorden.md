@@ -4,7 +4,7 @@
 
 Een inline box wordt net als een inline-element op dezelfde regel geplaatst, maar in tegenstelling tot een inline element kan de height en width van een inline-block element wel aangepast worden.
 
-Block elementen beginnen altijd op een nieuwe regel en zijn bij default net zo breed als de pagina (tenzij de width wordt aangepast).
+Block elementen beginnen altijd op een nieuwe regel en zijn bij default net zo breed als de pagina.
 
 ## Opdracht 3
 
@@ -18,9 +18,9 @@ Dan gebeurd er niets. Width en height hebben geen invloed op een inline element.
 
 Onderstaande termen leg ik uit aan de hand van een ingelijste foto.
 
-- Content: De ruimte die bepaalt wordt door de inhoud van het HTML element (dus de ruimte die de text of de plaatje etc.inneemt). Dit is de foto binnen de lijst
-- Padding: de ruimte tussen de content en de border (de ruimte binnen het element). Deze kan je vergelijking met een passepartout rondom de foto. De padding wordt gebruikt om ruimte tussen de inhoud en de border te creeren (bijvoorbeeld bij een button)
-- Margin: de ruimte buiten het element (tussen de border en het volgende element). De margin wordt meestal gebruikt om ruimte tussen elementen te creeren. Als je bijvoorbeeld twee ingelijste foto's naast elkaar ophangt dan is de ruimte tussen deze foto's de margin
+- Content: De ruimte die bepaalt wordt door de inhoud van het HTML element (dus de ruimte die de text of de plaatje etc.inneemt). Dit is de foto binnen de lijst.
+- Padding: de ruimte tussen de content en de border (de ruimte binnen het element). Deze kan je vergelijken met een passepartout rondom de foto. De padding wordt gebruikt om ruimte tussen de inhoud en de border te creeren (bijvoorbeeld bij een button).
+- Margin: de ruimte buiten het element (tussen de border en het volgende element). De margin wordt meestal gebruikt om ruimte tussen elementen te creeren. Als je bijvoorbeeld twee ingelijste foto's naast elkaar ophangt, dan is de ruimte tussen deze foto's de margin.
 - Border: de lijn rondom het element. Vergelijkbaar met de lijst van de foto.
 
 ## Opdracht 5
@@ -64,9 +64,14 @@ Dan gebruik je de margin property:
 
 **Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-width: 5px.**
 
-Hoe breed is de box?: 120px
-Hoe hoog is de box?: 120px
-Wat merk je op met width en height?: De border en padding worden bij de width en height opgeteld waardoor de box groter is dan de width en height die je hebt gespecificeerd.
+**Hoe breed is de box?**
+120px.
+
+**Hoe hoog is de box?:**
+120px.
+
+**Wat merk je op met width en height?:**
+De border en padding worden bij de width en height opgeteld waardoor de box groter is dan de width en height die je hebt gespecificeerd.
 
 ## Opdracht 8
 
