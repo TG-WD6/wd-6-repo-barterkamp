@@ -33,12 +33,15 @@
         position: absolute;
       }
 
-      .container:hover .box2 {
-        transform: translateX(160px) translateY(-180px);
+      .container:hover .box {
+        transition-property: top, left, bottom, right;
+        transition-duration: 3s;
+        transition-timing-function: ease-in;
       }
 
-      .box2 {
-        transition: transform 1s ease-out;
+      .container:hover .box.box1 {
+        top: 0;
+        right: 0;
       }
     </style>
   </head>
