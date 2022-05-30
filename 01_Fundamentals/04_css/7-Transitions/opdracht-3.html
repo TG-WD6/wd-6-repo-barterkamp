@@ -17,20 +17,7 @@
         flex-direction: column;
       }
 
-      .container:hover .box {
-        margin-left: 90%;
-        background-color: red;
-      }
-
-      .container:hover .box1 {
-        border-radius: 50%;
-      }
-
-      .container:hover .box2 {
-        border-radius: 20px;
-      }
-
-      .box {
+      .container .box {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,34 +25,40 @@
         width: 100px;
         height: 100px;
         margin: 10px;
+        transition-property: margin-left, background-color, border-radius;
       }
 
-      .box1,
-      .box2,
-      .box3,
-      .box4,
-      .box5 {
-        transition: margin-left, border-radius, background-color;
+      .container:hover .box {
+        margin-left: 90%;
+        background-color: red;
       }
 
       .box1 {
-        transition: 3s ease;
+        border-radius: 50%;
+        transition-duration: 3s;
+        transition-timing-function: ease-in;
       }
 
       .box2 {
-        transition: 3s ease-in-out;
+        border-radius: 20px;
+        transition-duration: 3s;
+        transition-timing-function: ease-in-out;
       }
 
       .box3 {
-        transition: 3s ease-out;
+        transition-duration: 3s;
+        transition-timing-function: ease-out;
       }
 
       .box4 {
-        transition: 3s 250ms ease-in-out;
+        transition-duration: 3s;
+        transition-delay: 250ms;
+        transition-timing-function: ease-in-out;
       }
 
       .box5 {
-        transition: 3s;
+        transition-duration: 3s;
+        transition-timing-function: cubic-bezier();
       }
     </style>
   </head>
