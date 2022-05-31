@@ -1,0 +1,13 @@
+.button {
+  padding: 10px 16px;
+  background-color: $primary-color;
+  border: none;
+  color: $text-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+}

@@ -1,0 +1,28 @@
+@import "./assets/colors", "./assets/button";
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn-color($color) {
+  background-color: $color;
+}
+
+body {
+  @include flexbox;
+  min-height: 100vh;
+}
+
+.container {
+  @include flexbox;
+
+  .button {
+    @include btn-color($button-color);
+
+    &:hover {
+      @include btn-color($button-hover-color);
+    }
+  }
+}
