@@ -3,6 +3,7 @@
 $translucent-white: rgba(255, 255, 255, 0.3);
 $icon-square-length: 300px;
 $standard-border: 4px solid black;
+$mobile: 375px;
 
 h1 {
   font-family: Roboto, sans-serif;
@@ -15,6 +16,12 @@ h1 {
   background-image: url("/01_Fundamentals/05_sass/opdrachten/images/lemonade.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+
+  @media screen and (max-width: $mobile) {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    background-image: none;
+  }
 
   .slogan {
     position: absolute;
@@ -50,5 +57,10 @@ h1 {
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  image {
+    height: (30px / 5px);
+    width: (24px / 4);
   }
 }
