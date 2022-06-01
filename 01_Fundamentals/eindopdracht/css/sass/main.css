@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border: 0.5px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 320px;
+  padding: 30px;
+}
+
+.login__image {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.login__heading {
+  font-size: 3rem;
+  color: #2b135c;
+}
+
+.login__subheading {
+  font-size: 1.8rem;
+  color: lightgrey;
+}
+
+.login__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.login__input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #2b135c;
+}
+
+.login__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.login__checkbox span {
+  font-size: 1.5rem;
+}
+
+.login__link {
+  font-size: 1.5rem;
+}
+
+.login__link a {
+  text-decoration: none;
+}
+
+.login__button {
+  border: none;
+  background-color: #2b135c;
+  border-radius: 20px;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.login__button:hover {
+  background-color: #49209b;
+}
+
+.login__icon {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+/*
+Reset geschreven door Josh Comeau 
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6px;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.4rem;
+    line-height: 36px;
+  }
+}
+
+h2 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 28px;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+@mixin h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2.4rem;
+    line-height: 36px;
+  }
+}
+
+@mixin h2 {
+  font-size: 3.4rem; // 2.4rem
+  font-weight: 700;
+  line-height: 50px; // 3.6rem
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+    line-height: 28px;
+  }
+}
+
+@mixin p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 30px;
+  @media screen and (max-width: 480px) {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+p {
+  @include p;
+}
