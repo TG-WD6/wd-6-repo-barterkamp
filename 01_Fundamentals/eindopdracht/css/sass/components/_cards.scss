@@ -1,3 +1,9 @@
+.wrapper {
+  @include flex-center(column);
+  min-height: 100vh;
+  background-color: #407be9;
+}
+
 .card {
   @include flex-center(column);
   gap: 30px;
@@ -42,7 +48,7 @@
 
   &__duration {
     color: #407be9;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   &__btn {
