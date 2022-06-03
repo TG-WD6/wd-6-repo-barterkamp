@@ -1,0 +1,120 @@
+// navigation container
+
+.navigation {
+  background-color: #2b135c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  width: 100vw;
+  height: 80px;
+  position: sticky;
+  top: 0;
+
+  // company logo
+
+  &__logo {
+    width: 200px;
+  }
+
+  // navigation checkbox
+
+  &__trigger {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  // hamburger element //
+
+  &__hamburger {
+    // hamburger stripes
+    span {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+      display: none; // hides the hamburger on screens > 767 px
+      transition: transform 0.3s; // triggers transform to X shape
+
+      @media screen and (max-width: 767px) {
+        // makes the hamburger visible on screens < 767px
+        display: block;
+      }
+    }
+  }
+
+  &__trigger:checked ~ &__hamburger span:first-child {
+    // rotates the first 45 deg bar when checkbox is clicked
+    transform: rotate(45deg);
+    top: 8px;
+    position: relative;
+  }
+
+  &__trigger:checked ~ &__hamburger span:last-child {
+    // rotates the third bar -45 deg bar when checkbox is clicked
+    transform: rotate(-45deg);
+    top: -8px;
+    position: relative;
+  }
+
+  &__trigger:checked ~ &__hamburger span:nth-child(2) {
+    // hides the second bar from view to create the X with first en third bar.
+    opacity: 0;
+  }
+
+  &__list {
+    // horizontal navigation links
+    display: flex;
+    gap: 40px;
+
+    @media screen and (max-width: 767px) {
+      // hides the navigation links on screen < 767 px
+      opacity: 0;
+      position: absolute;
+      flex-direction: column;
+      right: -100vw;
+      top: 80px;
+      background-color: #2b135c;
+      width: 100vw;
+      transition: right 0.2s ease-out;
+    }
+  }
+
+  // Shows the navigation list when hamburger is clicked
+
+  &__trigger:checked ~ &__list {
+    opacity: 1;
+    right: 0;
+    height: 20vh;
+    width: 100vw;
+    padding-left: 50px;
+
+    li:first-child {
+      margin-top: 40px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      color: white;
+    }
+  }
+
+  &__icon {
+    color: white;
+    width: 18px;
+    height: 18px;
+  }
+}
