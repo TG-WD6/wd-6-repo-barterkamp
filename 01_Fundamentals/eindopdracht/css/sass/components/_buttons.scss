@@ -1,0 +1,55 @@
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 100px;
+  color: white;
+}
+
+.btn--large {
+  background-color: $color-primary;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: lighten($color-primary, 10);
+  }
+}
+
+.btn--small {
+  background-color: $color-secondary;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 2rem;
+
+  &:hover {
+    background-color: lighten($color-secondary, 15);
+  }
+}
+
+.btn--cta {
+  background-color: $color-accent;
+  padding: 1rem 4rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($color-accent, 5);
+  }
+}
+
+.login__btn {
+  @include flex-center(row);
+  gap: 10px;
+  width: 100%;
+}
+
+.card__btn {
+  @include flex-center(row);
+  align-self: flex-start;
+  gap: 5px;
+}

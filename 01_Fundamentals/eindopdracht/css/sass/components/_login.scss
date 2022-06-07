@@ -18,6 +18,8 @@
   max-width: 350px;
   padding: 30px;
   background-color: #fff;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 
   &__image {
     width: 60%;
@@ -68,25 +70,6 @@
 
     &:hover {
       color: #2b135c;
-    }
-  }
-
-  &__button {
-    border: none;
-    background-color: #407be9;
-    border-radius: 20px;
-    width: 100%;
-    color: #fff;
-    cursor: pointer;
-    padding: 1rem;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    @include flex-center(row);
-    gap: 10px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: lighten(#407be9, 10);
     }
   }
 

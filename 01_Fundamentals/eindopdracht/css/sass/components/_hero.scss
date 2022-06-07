@@ -2,11 +2,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background-color: #407be9;
+  background-color: $color-primary;
   margin-top: 80px;
+  border-radius: 0 0 20px 20px;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 
   &__information {
-    padding-left: 5rem;
+    padding: 2rem 0 2rem 5rem;
+
+    @media screen and (max-width: 480px) {
+      margin-top: 4rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -15,23 +27,6 @@
 
   &__text {
     color: white;
-    margin-bottom: 5rem;
-  }
-
-  &__button {
-    border: none;
-    background-color: #dd5336;
-    border-radius: 100px;
-    color: #fff;
-    cursor: pointer;
-    padding: 1em 4em;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    gap: 10px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: lighten(#dd5336, 10);
-    }
+    margin-bottom: 3rem;
   }
 }

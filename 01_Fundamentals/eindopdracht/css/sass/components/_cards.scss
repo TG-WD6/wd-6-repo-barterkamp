@@ -1,24 +1,30 @@
 .wrapper {
   @include flex-center(column);
   min-height: 100vh;
-  background-color: #407be9;
+  background-color: $color-primary;
 }
 
 .card {
   @include flex-center(column);
   gap: 30px;
+  background-color: white;
   border-radius: 20px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border: 0.5px solid lightgrey;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   max-width: 1100px;
   padding: 30px;
-  background-color: #ebf3fd;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 
   &__information {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     align-items: center;
+
+    @media screen and (max-width: 820px) {
+      grid-template-columns: 1fr 2fr;
+    }
 
     @media screen and (max-width: 450px) {
       grid-template-columns: 1fr;
@@ -35,38 +41,29 @@
     flex-direction: column;
     gap: 5px;
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 820px) {
       flex-direction: row;
-      gap: 20px;
+      gap: 30px;
+      grid-column: 2 / -1;
+    }
+
+    @media screen and (max-width: 450px) {
+      gap: 30px;
+      grid-column: 1;
     }
   }
 
   &__price {
-    color: #dc5535;
+    color: $color-accent;
     font-weight: 700;
   }
 
   &__duration {
-    color: #407be9;
+    color: $color-primary;
     font-size: 1.4rem;
-  }
 
-  &__btn {
-    background-color: #2b135c;
-    align-self: flex-start;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 2rem;
-    outline: 0;
-    border: none;
-    cursor: pointer;
-    @include flex-center(row);
-    gap: 5px;
-    transition: background-color 0.3s ease;
-    border-radius: 20px;
-    &:hover {
-      background-color: lighten(#2b135c, 15);
+    @media screen and (max-width: 450px) {
+      font-size: 1.2rem;
     }
   }
 

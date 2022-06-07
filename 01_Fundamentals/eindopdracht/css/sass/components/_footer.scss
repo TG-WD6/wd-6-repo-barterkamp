@@ -6,18 +6,15 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border: 0.5px solid lightgrey;
   padding: 30px;
-  background-color: #2b135c;
+  background-color: $color-secondary;
   width: 100%;
 
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
+    margin-top: 4rem;
   }
-
-  // &__list {
-  //   list-style: none;
-  // }
 
   &__list-item {
     font-size: 1.5rem;
@@ -60,7 +57,7 @@
   .social-icon {
     width: 24px;
     height: 24px;
-    color: #fff;
+    color: white;
     margin-left: 3px;
   }
 }
