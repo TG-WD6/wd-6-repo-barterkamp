@@ -2,28 +2,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 30px;
-  border-radius: 20px 20px 0 0;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border: 0.5px solid lightgrey;
-  padding: 30px;
   background-color: $color-secondary;
-  width: 100%;
+  border-radius: 20px 20px 0 0;
+  border: 0.5px solid $color-border;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 30px;
 
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
+    gap: 20px;
     text-align: center;
-    gap: 40px;
-    margin-top: 4rem;
   }
 
   &__list-item {
-    font-size: 1.5rem;
-    color: white;
     margin-bottom: 1rem;
 
     &:first-child {
-      font-weight: bold;
-      font-size: 1.6rem;
+      font-weight: 700;
+      font-size: 2rem;
+      color: $color-text;
     }
 
     &:last-child {
@@ -31,7 +28,7 @@
     }
 
     & a {
-      color: white;
+      color: $color-text;
     }
   }
 
@@ -44,7 +41,7 @@
   }
 
   &__text {
-    color: white;
+    color: $color-text;
     font-weight: 700;
     margin-bottom: 1rem;
   }
@@ -57,7 +54,11 @@
   .social-icon {
     width: 24px;
     height: 24px;
-    color: white;
+    color: $color-text;
     margin-left: 3px;
+  }
+
+  .social-icon:hover {
+    color: $color-primary;
   }
 }

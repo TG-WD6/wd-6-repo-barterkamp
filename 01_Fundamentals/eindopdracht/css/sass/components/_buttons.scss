@@ -1,10 +1,10 @@
 .btn {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   border-radius: 100px;
-  color: white;
+  border: none;
+  color: $color-text;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn--large {
@@ -20,9 +20,9 @@
 
 .btn--small {
   background-color: $color-secondary;
-  padding-left: 15px;
-  padding-right: 15px;
   font-size: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 
   &:hover {
     background-color: lighten($color-secondary, 15);
@@ -31,11 +31,10 @@
 
 .btn--cta {
   background-color: $color-accent;
-  padding: 1rem 4rem;
   font-size: 1.4rem;
-  text-transform: uppercase;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
 
   &:hover {
     background-color: lighten($color-accent, 5);

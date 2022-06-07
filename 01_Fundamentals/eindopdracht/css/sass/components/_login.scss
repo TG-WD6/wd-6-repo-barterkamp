@@ -14,24 +14,26 @@
   gap: 1rem;
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border: 0.5px solid lightgrey;
+  border: 0.5px solid $color-border;
   max-width: 350px;
   padding: 30px;
-  background-color: #fff;
+  background-color: $color-text;
   margin-top: 6rem;
   margin-bottom: 6rem;
 
   &__image {
     width: 60%;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
   }
 
   &__heading {
-    color: #2b135c;
+    color: $color-secondary;
+    margin-bottom: 0;
   }
 
   &__subheading {
     color: lightgrey;
+    margin-bottom: 2rem;
   }
 
   &__form {
@@ -45,7 +47,7 @@
     width: 100%;
     border: 0;
     outline: 0;
-    border-bottom: 1px solid #2b135c;
+    border-bottom: 1px solid $color-secondary;
   }
 
   &__check {
@@ -66,20 +68,15 @@
 
   &__link a {
     font-size: 1.5rem;
-    color: #407be9;
+    color: $color-primary;
 
     &:hover {
-      color: #2b135c;
+      color: $color-secondary;
     }
   }
 
   &__icon {
     width: 16px;
     height: 16px;
-    fill: white;
   }
-}
-
-.demo {
-  color: white;
 }
