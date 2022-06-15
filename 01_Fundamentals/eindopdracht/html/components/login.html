@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/01_Fundamentals/eindopdracht/css/sass/main.css"
+    />
+
+    <title>Login Component</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="login">
+        <img
+          src="/01_Fundamentals/eindopdracht/images/login-icon.png"
+          alt=""
+          class="login__image"
+        />
+        <h2 class="login__heading">Login</h2>
+        <h3 class="login__subheading">Login met je e-mailadres</h3>
+        <form class="login__form">
+          <p>
+            <input
+              class="login__input"
+              type="email"
+              aria-label="email"
+              placeholder="E-mail"
+            />
+          </p>
+          <p>
+            <input
+              class="login__input"
+              type="password"
+              aria-label="password"
+              placeholder="Wachtwoord"
+              required
+            />
+          </p>
+          <div class="login__check">
+            <div class="login__checkbox">
+              <input
+                type="checkbox"
+                id="remember_me"
+                aria-label="remember me checkbox"
+                required
+              />
+              <label for="remember_me">Onthoud mij</label>
+            </div>
+            <div class="login__link">
+              <a href="#">Wachtwoord vergeten?</a>
+            </div>
+          </div>
+          <a href="/01_Fundamentals/eindopdracht/html/home.html"
+            ><button class="btn login__btn btn--large" aria-label="Login">
+              login
+              <img
+                class="login__icon"
+                src="/01_Fundamentals/eindopdracht/images/login-arrow.png"
+                alt=""
+              /></button
+          ></a>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

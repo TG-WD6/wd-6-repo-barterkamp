@@ -1,0 +1,32 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: $color-primary;
+  border-radius: 0 0 20px 20px;
+  margin-top: 80px;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__information {
+    padding: 2rem 0 2rem 5rem;
+
+    @media screen and (max-width: 480px) {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    color: $color-text;
+  }
+
+  &__text {
+    color: $color-text;
+    margin-bottom: 3rem;
+  }
+}
