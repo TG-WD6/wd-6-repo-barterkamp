@@ -292,66 +292,145 @@
 
 // console.log(bubbleArray);
 
-const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+// const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
 
-dutchSports.push("Zeilen", "Zwemmen");
+// dutchSports.push("Zeilen", "Zwemmen");
 
-// Array(5) [ "Voetbal", "Hockey", "Schaatsen", "Zeilen", "Zwemmen" ]
+// // Array(5) [ "Voetbal", "Hockey", "Schaatsen", "Zeilen", "Zwemmen" ]
 
-dutchSports.unshift("Volleybal");
+// dutchSports.unshift("Volleybal");
 
-// Array(6) [ "Volleybal", "Voetbal", "Hockey", "Schaatsen", "Zeilen", "Zwemmen" ]
+// // Array(6) [ "Volleybal", "Voetbal", "Hockey", "Schaatsen", "Zeilen", "Zwemmen" ]
 
-const ballSport = dutchSports.filter((element) => element.includes("bal"));
+// const ballSport = dutchSports.filter((element) => element.includes("bal"));
 
-// for (let i = dutchSports.length - 1; i >= 0; i--) {
+// // for (let i = dutchSports.length - 1; i >= 0; i--) {
+// //   if (dutchSports[i] === "Voetbal" || dutchSports[i] === "Volleybal") {
+// //     dutchSports.splice(i, 1);
+// //   }
+// // }
+
+// // console.log(dutchSports);
+
+// for (let i = 0; i < dutchSports.length; i++) {
 //   if (dutchSports[i] === "Voetbal" || dutchSports[i] === "Volleybal") {
 //     dutchSports.splice(i, 1);
+//     i--;
+//     // tijdens de eerste iteratie wordt Volleybal uit de array gesloopt.
+//     // Tijdens de volgende iteratie zit voetbal op de index van volleybal maar als gevolg van de /// increment kijkt de loop nu naar de index ernasst en wordt voetbal overgeslagen. Door er // // weer 1 af te halen kijkt de loop naar de juiste index.
 //   }
 // }
 
-// console.log(dutchSports);
+// // console.log(dutchSports);
+// // (dutchSports.sort());
+// // dutchSports.sort()
 
-for (let i = 0; i < dutchSports.length; i++) {
-  if (dutchSports[i] === "Voetbal" || dutchSports[i] === "Volleybal") {
-    dutchSports.splice(i, 1);
-    i--;
-    // tijdens de eerste iteratie wordt Volleybal uit de array gesloopt.
-    // Tijdens de volgende iteratie zit voetbal op de index van volleybal maar als gevolg van de /// increment kijkt de loop nu naar de index ernasst en wordt voetbal overgeslagen. Door er // // weer 1 af te halen kijkt de loop naar de juiste index.
+// // for (let sport of dutchSports) {
+// //   console.log(sport);
+// // }
+
+// // creer een lege array
+// let sportsLength = [];
+// // loop door de dutchSports array
+// for (let i = 0; i < dutchSports.length; i++) {
+//   // push de lengte van de array items naar de lege array
+//   sportsLength.push(dutchSports[i].length);
+// }
+
+// console.log(sportsLength);
+// // Array(4) [ 6, 9, 6, 7 ]
+
+// let arrayLike = document.querySelectorAll("div");
+
+// console.log(Array.from(arrayLike));
+
+// const numbersArray = [200, 400, -400, 3000, -70, 1300];
+
+// const positiveNumbers = numbersArray.filter((elements) => elements > 0);
+// console.log(positiveNumbers);
+
+// const find3000 = numbersArray.find((element) => element === 3000);
+// console.log(find3000);
+
+// console.log(numbersArray.some((element) => element > 400));
+
+// console.log();
+
+// const petOne = new Object();
+
+// petOne.name = "Bas";
+// petOne.species = "Dog";
+
+// console.log(petOne);
+
+// const petTwo = {
+//   name: "catniss",
+//   species: "cat",
+// };
+
+// console.log(petTwo);
+
+// function PetThree(name, species) {
+//   this.name = name;
+//   this.species = species;
+// }
+
+// let myPet = new PetThree("Jojo", "Rabbit");
+// console.log(myPet);
+
+// const petFour = new (function () {
+//   (this.name = "Leonardo"), (this.species = "Turtle");
+// })();
+
+// console.log(petFour);
+
+class PetFive {
+  constructor(name, species) {
+    this.name = name;
+    this.species = species;
   }
 }
 
-// console.log(dutchSports);
-// (dutchSports.sort());
-// dutchSports.sort()
+const Fufu = new PetFive("Fufu", "Hamster");
 
-// for (let sport of dutchSports) {
-//   console.log(sport);
-// }
+console.log(Fufu);
 
-// creer een lege array
-let sportsLength = [];
-// loop door de dutchSports array
-for (let i = 0; i < dutchSports.length; i++) {
-  // push de lengte van de array items naar de lege array
-  sportsLength.push(dutchSports[i].length);
+// //////////////////////
+
+// const dog = Object.create(petOne);
+// const cat = Object.create(petTwo);
+// const rabbit = Object.create(myPet);
+// const turtle = Object.create(petFour);
+// const hamster = Object.create(Fufu);
+
+// const people = [
+//   { name: "Dianne", age: 38 },
+//   { name: "Sander", age: 43 },
+//   { name: "Gerard", age: 73 },
+//   { name: "Anne", age: 38 },
+//   { name: "Marjo", age: 74 },
+// ];
+// console.log(people);
+
+// people.sort((a, b) => a.age - b.age);
+// console.log(people);
+
+class Club {
+  constructor(name, type, members) {
+    this.name = name;
+    this.type = type;
+    this.members = members;
+  }
 }
 
-console.log(sportsLength);
-// Array(4) [ 6, 9, 6, 7 ]
+class Contact {
+  constructor(address, phonenumber, contactperson) {
+    this.address = address;
+    this.phonenumber = phonenumber;
+    this.contactperson = contactperson;
+  }
+}
 
-let arrayLike = document.querySelectorAll("div");
+console.log(Club);
 
-console.log(Array.from(arrayLike));
-
-const numbersArray = [200, 400, -400, 3000, -70, 1300];
-
-const positiveNumbers = numbersArray.filter((elements) => elements > 0);
-console.log(positiveNumbers);
-
-const find3000 = numbersArray.find((element) => element === 3000);
-console.log(find3000);
-
-console.log(numbersArray.some((element) => element > 400));
-
-console.log();
+const clubsArr = ["Ajax", "Twente", "PSV", "Feyenoord", "NAC"];
