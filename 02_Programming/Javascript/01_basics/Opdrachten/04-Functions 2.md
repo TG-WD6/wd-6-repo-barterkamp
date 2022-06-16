@@ -140,24 +140,15 @@ function whatsYourName(name) {
 2.
 
 ```js
-const whatsYourName = function (name) {
-  if (
-    name.toLowerCase() === "sander" ||
-    name.toLowerCase() === "marko" ||
-    name.toLowerCase() === "bart" ||
-    name.toLowerCase() === "junier" ||
-    name.toLowerCase() === "szymon"
-  ) {
-    return `${name} is a member of group one`;
-  } else return `Error, ${name} is not a member of group 1`;
-};
-
-const call = function (firstName) {
+function call(firstName) {
   const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${firstName("Bart")}</div>`);
-};
+  body.insertAdjacentHTML(
+    "beforeend",
+    `<div>${whatsYourName(firstName)}</div>`
+  );
+}
 
-call(whatsYourName);
+call("Bart");
 ```
 
 3.
