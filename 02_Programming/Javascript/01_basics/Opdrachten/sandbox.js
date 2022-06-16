@@ -146,27 +146,24 @@
 // console.log(Math.min(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 0
 // console.log(Math.max(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 9
 
-// const whatsYourName = function (name) {
-//   if (
-//     name.toLowerCase() === "sander" ||
-//     name.toLowerCase() === "marko" ||
-//     name.toLowerCase() === "bart" ||
-//     name.toLowerCase() === "junier" ||
-//     name.toLowerCase() === "szymon"
-//   ) {
-//     return `${name} is a member of group one`;
-//   } else return `Error, ${name} is not a member of group 1`;
-// };
+const whatsYourName = function (name) {
+  if (
+    name.toLowerCase() === "sander" ||
+    name.toLowerCase() === "marko" ||
+    name.toLowerCase() === "bart" ||
+    name.toLowerCase() === "junier" ||
+    name.toLowerCase() === "szymon"
+  ) {
+    return `${name} is a member of group one`;
+  } else return `Error, ${name} is not a member of group 1`;
+};
 
-// const call = function (firstName) {
-//   const body = document.querySelector("body");
-//   body.insertAdjacentHTML(
-//     "beforeend",
-//     `<div>${whatsYourName(firstName)}</div>`
-//   );
-// };
+const call = function (firstName) {
+  const body = document.querySelector("body");
+  body.insertAdjacentHTML("beforeend", `<div>${firstName("Bart")}</div>`);
+};
 
-// call("Bart");
+call(whatsYourName);
 
 // const whatsYourName = (name) => {
 //   if (
