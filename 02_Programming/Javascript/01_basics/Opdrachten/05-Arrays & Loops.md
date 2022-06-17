@@ -127,18 +127,13 @@ for (let i = 1; i <= 3; i++) {
 
 ```js
 let arr = [0, 1];
-// maar een counter variable die begint bij 1 (het laatste getal uit de array)
-let total = 1;
-// loop door de array
-for (let i = 0; i < arr.length; i++) {
-  // tel bij iedere iteratie de laatste indices op bij total
-  total += arr[i];
+// loop door 50 getallen en begin bij index 2
+for (let i = 2; i <= 50; i++) {
+  // tel bij iedere iteratie de laatste 2 indices op bij total
+  arr[i] = arr[i - 2] + arr[i - 1];
   // push het resultaat in de array
-  arr.push(total);
-  // breek uit de loop zodra er 50 getallen inzitten
-  if (arr.length === 50) break;
+  arr.push(arr[i]);
 }
-
 console.log(arr);
 ```
 

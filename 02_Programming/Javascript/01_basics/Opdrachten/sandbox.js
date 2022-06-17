@@ -251,41 +251,46 @@
 //   }
 // }
 
+for (let i = 1; i <= 3; i++) {
+  // i = 1, i = 2, i = 3
+  for (let j = 1; j <= 10; j++) {
+    // j = 1 t/m 10
+    console.log(i * j);
+    // door j te vermenigvuldigen met i krijg je iedere iteratie een andere uitkomst
+  }
+}
+
 // Nu maken we het iets lastiger. De Reeks van Fibonacci is een lijst met getallen waarbij elk getal een opsomming is van de vorige 2 getallen.
 
 // Begin met het array [0,1]. Maak vervolgens een loop die dit array vult met de eerste 50 getallen van de Reeks van Fibonacci. Log dit array.
 
-// let arr = [0, 1];
-// // maar een counter variable die begint bij 1 (het laatste getal uit de array)
-// let total = 1;
-// // loop door de array
-// for (let i = 0; i < arr.length; i++) {
-//   // tel bij iedere iteratie de laatste indices op bij total
-//   total += arr[i];
-//   // push het resultaat in de array
-//   arr.push(total);
-//   // breek uit de loop zodra er 50 getallen inzitten
-//   if (arr.length === 50) break;
-// }
+let arr = [0, 1];
 
-// console.log(arr);
+// loop door 50 getallen
+for (let i = 2; i <= 50; i++) {
+  // tel bij iedere iteratie de laatste indices op bij total
+  arr[i] = arr[i - 2] + arr[i - 1];
+  // push het resultaat in de array
+  arr.push(arr[i]);
+}
+console.log(arr);
 
-// const bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+const bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
 
-// for (let i = 0; i < bubbleArray.length; i++) {
-//   let swapped = false;
-//   for (let j = 0; j < bubbleArray.length; j++) {
-//     // als het cijfer op index j groter is dan het cijfer op de naastgelegen index, swap dan de variables en zet swapped op true.
-//     if (bubbleArray[j] > bubbleArray[j + 1]) {
-//       [bubbleArray[j], bubbleArray[j + 1]] = [
-//         bubbleArray[j + 1],
-//         bubbleArray[j],
-//       ];
-//       swapped = true;
-//       if (!swapped) break;
-//     }
-//   }
-// }
+for (let i = 0; i < bubbleArray.length; i++) {
+  let swapped = false;
+  for (let j = 0; j < bubbleArray.length; j++) {
+    // als het cijfer op index j groter is dan het cijfer op de naastgelegen index, swap dan de variables en zet swapped op true.
+    if (bubbleArray[j] > bubbleArray[j + 1]) {
+      [bubbleArray[j], bubbleArray[j + 1]] = [
+        bubbleArray[j + 1],
+        bubbleArray[j],
+      ];
+      swapped = true;
+      if (!swapped) break;
+    }
+  }
+}
 
 // console.log(bubbleArray);
 
