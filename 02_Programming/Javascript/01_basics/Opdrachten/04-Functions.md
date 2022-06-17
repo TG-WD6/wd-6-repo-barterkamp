@@ -152,12 +152,12 @@ const whatsYourName = function (name) {
   } else return `Error, ${name} is not a member of group 1`;
 };
 
-const call = function (callback, firstName) {
+const call = function (callback) {
   const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
+  body.insertAdjacentHTML("beforeend", `<div>${callback}</div>`);
 };
 
-call(whatsYourName, "Bart");
+call(whatsYourName("Bart"));
 ```
 
 3.
@@ -175,10 +175,10 @@ const whatsYourName = (name) => {
   } else return `Error, ${name} is not a member of group 1`;
 };
 
-const call = (callback, firstName) => {
+const call = function (callback) {
   const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
+  body.insertAdjacentHTML("beforeend", `<div>${callback}</div>`);
 };
 
-call(whatsYourName, "Bart");
+call(whatsYourName("Bart"));
 ```

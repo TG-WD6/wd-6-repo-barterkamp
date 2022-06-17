@@ -146,24 +146,24 @@
 // console.log(Math.min(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 0
 // console.log(Math.max(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 9
 
-// const whatsYourName = function (name) {
-//   if (
-//     name.toLowerCase() === "sander" ||
-//     name.toLowerCase() === "marko" ||
-//     name.toLowerCase() === "bart" ||
-//     name.toLowerCase() === "junier" ||
-//     name.toLowerCase() === "szymon"
-//   ) {
-//     return `${name} is a member of group one`;
-//   } else return `Error, ${name} is not a member of group 1`;
-// };
+const whatsYourName = function (name) {
+  if (
+    name.toLowerCase() === "sander" ||
+    name.toLowerCase() === "marko" ||
+    name.toLowerCase() === "bart" ||
+    name.toLowerCase() === "junier" ||
+    name.toLowerCase() === "szymon"
+  ) {
+    return `${name} is a member of group one`;
+  } else return `Error, ${name} is not a member of group 1`;
+};
 
-// const call = function (callback, firstName) {
-//   const body = document.querySelector("body");
-//   body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
-// };
+const call = function (callback) {
+  const body = document.querySelector("body");
+  body.insertAdjacentHTML("beforeend", `<div>${callback}</div>`);
+};
 
-// call(whatsYourName, "Bart");
+call(whatsYourName("Bart"));
 
 // const whatsYourName = (name) => {
 //   if (
@@ -265,9 +265,8 @@ for (let i = 1; i <= 3; i++) {
 // Begin met het array [0,1]. Maak vervolgens een loop die dit array vult met de eerste 50 getallen van de Reeks van Fibonacci. Log dit array.
 
 let arr = [0, 1];
-
 // loop door 50 getallen
-for (let i = 2; i <= 50; i++) {
+for (let i = 2; i <= 48; i++) {
   // tel bij iedere iteratie de laatste indices op bij total
   arr[i] = arr[i - 2] + arr[i - 1];
   // push het resultaat in de array
