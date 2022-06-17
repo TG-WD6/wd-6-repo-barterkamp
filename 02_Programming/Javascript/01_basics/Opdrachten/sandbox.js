@@ -146,24 +146,24 @@
 // console.log(Math.min(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 0
 // console.log(Math.max(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 9
 
-const whatsYourName = function (name) {
-  if (
-    name.toLowerCase() === "sander" ||
-    name.toLowerCase() === "marko" ||
-    name.toLowerCase() === "bart" ||
-    name.toLowerCase() === "junier" ||
-    name.toLowerCase() === "szymon"
-  ) {
-    return `${name} is a member of group one`;
-  } else return `Error, ${name} is not a member of group 1`;
-};
+// const whatsYourName = function (name) {
+//   if (
+//     name.toLowerCase() === "sander" ||
+//     name.toLowerCase() === "marko" ||
+//     name.toLowerCase() === "bart" ||
+//     name.toLowerCase() === "junier" ||
+//     name.toLowerCase() === "szymon"
+//   ) {
+//     return `${name} is a member of group one`;
+//   } else return `Error, ${name} is not a member of group 1`;
+// };
 
-const call = function (firstName) {
-  const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${firstName("Bart")}</div>`);
-};
+// const call = function (callback, firstName) {
+//   const body = document.querySelector("body");
+//   body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
+// };
 
-call(whatsYourName);
+// call(whatsYourName, "Bart");
 
 // const whatsYourName = (name) => {
 //   if (
@@ -381,16 +381,16 @@ call(whatsYourName);
 
 // console.log(petFour);
 
-class PetFive {
-  constructor(name, species) {
-    this.name = name;
-    this.species = species;
-  }
-}
+// class PetFive {
+//   constructor(name, species) {
+//     this.name = name;
+//     this.species = species;
+//   }
+// }
 
-const Fufu = new PetFive("Fufu", "Hamster");
+// const Fufu = new PetFive("Fufu", "Hamster");
 
-console.log(Fufu);
+// console.log(Fufu);
 
 // //////////////////////
 
@@ -412,22 +412,41 @@ console.log(Fufu);
 // people.sort((a, b) => a.age - b.age);
 // console.log(people);
 
-class Club {
-  constructor(name, type, members) {
-    this.name = name;
-    this.type = type;
-    this.members = members;
-  }
-}
+// class Club {
+//   constructor(name, type, members) {
+//     this.name = name;
+//     this.type = type;
+//     this.members = members;
+//   }
+// }
 
-class Contact {
-  constructor(address, phonenumber, contactperson) {
-    this.address = address;
-    this.phonenumber = phonenumber;
-    this.contactperson = contactperson;
-  }
-}
+// console.log(Club);
 
-console.log(Club);
+// const clubsArr = ["Ajax", "Twente", "PSV", "Feyenoord", "NAC"];
 
-const clubsArr = ["Ajax", "Twente", "PSV", "Feyenoord", "NAC"];
+// function printVariable(variable) {
+//   console.log(variable);
+// }
+
+// function test(name, callback) {
+//   callback("Hello " + name);
+// }
+
+// test("Bart", printVariable);
+
+// const sentence = ["has kidnapped", "has escaped from", "has killed"];
+
+// const body = document.querySelector("body");
+// const firstName = document.querySelector(".input1");
+// const secondName = document.querySelector(".input2");
+
+// function generateFrase() {
+//   const name1 = firstName.value;
+//   const name2 = secondName.value;
+//   const number = Math.floor(Math.random() * sentence.length);
+//   const phrase = sentence[number];
+//   return body.insertAdjacentHTML(
+//     "beforeend",
+//     `<div>${name1} ${phrase} ${name2}</div>`
+//   );
+// }
