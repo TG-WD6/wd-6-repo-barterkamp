@@ -152,12 +152,12 @@ const whatsYourName = function (name) {
   } else return `Error, ${name} is not a member of group 1`;
 };
 
-const call = function (firstName) {
+const call = function (callback, firstName) {
   const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${firstName("Bart")}</div>`);
+  body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
 };
 
-call(whatsYourName);
+call(whatsYourName, "Bart");
 ```
 
 3.
@@ -172,16 +172,13 @@ const whatsYourName = (name) => {
     name.toLowerCase() === "szymon"
   ) {
     return `${name} is a member of group one`;
-  } else return `${name} is NOT a member of group 1`;
+  } else return `Error, ${name} is not a member of group 1`;
 };
 
-const call = (firstName) => {
+const call = (callback, firstName) => {
   const body = document.querySelector("body");
-  body.insertAdjacentHTML(
-    "beforeend",
-    `<div>${whatsYourName(firstName)}</div>`
-  );
+  body.insertAdjacentHTML("beforeend", `<div>${callback(firstName)}</div>`);
 };
 
-call("Jens");
+call(whatsYourName, "Bart");
 ```
