@@ -146,24 +146,24 @@
 // console.log(Math.min(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 0
 // console.log(Math.max(1, 5, 6, 3, 8, 9, 8, 3, 0, 2)); // 9
 
-const whatsYourName = function (name) {
-  if (
-    name.toLowerCase() === "sander" ||
-    name.toLowerCase() === "marko" ||
-    name.toLowerCase() === "bart" ||
-    name.toLowerCase() === "junier" ||
-    name.toLowerCase() === "szymon"
-  ) {
-    return `${name} is a member of group one`;
-  } else return `Error, ${name} is not a member of group 1`;
-};
+// const whatsYourName = function (name) {
+//   if (
+//     name.toLowerCase() === "sander" ||
+//     name.toLowerCase() === "marko" ||
+//     name.toLowerCase() === "bart" ||
+//     name.toLowerCase() === "junier" ||
+//     name.toLowerCase() === "szymon"
+//   ) {
+//     return `${name} is a member of group one`;
+//   } else return `Error, ${name} is not a member of group 1`;
+// };
 
-const call = function (callback) {
-  const body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${callback}</div>`);
-};
+// const call = function (callback) {
+//   const body = document.querySelector("body");
+//   body.insertAdjacentHTML("beforeend", `<div>${callback}</div>`);
+// };
 
-call(whatsYourName("Bart"));
+// call(whatsYourName("Bart"));
 
 // const whatsYourName = (name) => {
 //   if (
@@ -251,45 +251,45 @@ call(whatsYourName("Bart"));
 //   }
 // }
 
-for (let i = 1; i <= 3; i++) {
-  // i = 1, i = 2, i = 3
-  for (let j = 1; j <= 10; j++) {
-    // j = 1 t/m 10
-    console.log(i * j);
-    // door j te vermenigvuldigen met i krijg je iedere iteratie een andere uitkomst
-  }
-}
+// for (let i = 1; i <= 3; i++) {
+//   // i = 1, i = 2, i = 3
+//   for (let j = 1; j <= 10; j++) {
+//     // j = 1 t/m 10
+//     console.log(i * j);
+//     // door j te vermenigvuldigen met i krijg je iedere iteratie een andere uitkomst
+//   }
+// }
 
 // Nu maken we het iets lastiger. De Reeks van Fibonacci is een lijst met getallen waarbij elk getal een opsomming is van de vorige 2 getallen.
 
 // Begin met het array [0,1]. Maak vervolgens een loop die dit array vult met de eerste 50 getallen van de Reeks van Fibonacci. Log dit array.
 
-let arr = [0, 1];
-// loop door 50 getallen
-for (let i = 2; i <= 48; i++) {
-  // tel bij iedere iteratie de laatste indices op bij total
-  arr[i] = arr[i - 2] + arr[i - 1];
-  // push het resultaat in de array
-  arr.push(arr[i]);
-}
-console.log(arr);
+// let arr = [0, 1];
+// // loop door 50 getallen
+// for (let i = 2; i <= 48; i++) {
+//   // tel bij iedere iteratie de laatste indices op bij total
+//   arr[i] = arr[i - 2] + arr[i - 1];
+//   // push het resultaat in de array
+//   arr.push(arr[i]);
+// }
+// console.log(arr);
 
-const bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+// const bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
 
-for (let i = 0; i < bubbleArray.length; i++) {
-  let swapped = false;
-  for (let j = 0; j < bubbleArray.length; j++) {
-    // als het cijfer op index j groter is dan het cijfer op de naastgelegen index, swap dan de variables en zet swapped op true.
-    if (bubbleArray[j] > bubbleArray[j + 1]) {
-      [bubbleArray[j], bubbleArray[j + 1]] = [
-        bubbleArray[j + 1],
-        bubbleArray[j],
-      ];
-      swapped = true;
-      if (!swapped) break;
-    }
-  }
-}
+// for (let i = 0; i < bubbleArray.length; i++) {
+//   let swapped = false;
+//   for (let j = 0; j < bubbleArray.length; j++) {
+//     // als het cijfer op index j groter is dan het cijfer op de naastgelegen index, swap dan de variables en zet swapped op true.
+//     if (bubbleArray[j] > bubbleArray[j + 1]) {
+//       [bubbleArray[j], bubbleArray[j + 1]] = [
+//         bubbleArray[j + 1],
+//         bubbleArray[j],
+//       ];
+//       swapped = true;
+//       if (!swapped) break;
+//     }
+//   }
+// }
 
 // console.log(bubbleArray);
 
@@ -404,17 +404,17 @@ for (let i = 0; i < bubbleArray.length; i++) {
 // const turtle = Object.create(petFour);
 // const hamster = Object.create(Fufu);
 
-// const people = [
-//   { name: "Dianne", age: 38 },
-//   { name: "Sander", age: 43 },
-//   { name: "Gerard", age: 73 },
-//   { name: "Anne", age: 38 },
-//   { name: "Marjo", age: 74 },
-// ];
-// console.log(people);
+const people = [
+  { name: "Dianne", age: 38 },
+  { name: "Sander", age: 43 },
+  { name: "Gerard", age: 73 },
+  { name: "Anne", age: 38 },
+  { name: "Marjo", age: 74 },
+];
+console.table(people);
 
-// people.sort((a, b) => a.age - b.age);
-// console.log(people);
+people.sort((a, b) => a.age - b.age);
+console.table(people);
 
 // class Club {
 //   constructor(name, type, members) {
@@ -454,3 +454,229 @@ for (let i = 0; i < bubbleArray.length; i++) {
 //     `<div>${name1} ${phrase} ${name2}</div>`
 //   );
 // }
+
+// function warnTheSheep(queue) {
+//   // reverse the que
+//   const reversed = queue.reverse();
+//   // [sheep, wolf, sheep, sheep, sheep]
+
+//   for (let i = 0; i < reversed.length; i++) {
+//     console.log(reversed[i]);
+//   }
+// }
+
+// warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep"]);
+// // index 1 is wolf
+
+/*Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.*/
+
+// function lovefunc(flower1, flower2) {
+//   if (flower1 % 2 === 0 && flower2 % 2 === 1) {
+//     return true;
+//   } else if (flower1 % 2 === 1 && flower2 % 2 === 0) {
+//     return true;
+//   } else return false;
+// }
+
+// console.log(lovefunc(1, 4));
+
+// Your task is to write a function which returns the time since midnight in milliseconds
+
+// function past(h, m, s) {
+//   {
+//     return h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000;
+//   }
+// }
+// console.log(past(1, 1, 1));
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog, NASM and COBOL) if it is possible and false (0 in Prolog, NASM and COBOL) if not. The input values are always positive.
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   const willWeMakeIt = distanceToPump <= fuelLeft * mpg ? true : false;
+//   return willWeMakeIt;
+// };
+
+// console.log(zeroFuel(50, 25, 2)); //true
+// console.log(zeroFuel(100, 50, 1));
+
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
+
+// let jonas = new Person("Jonas", 1991);
+// let bart = new Person("Bart", 1980);
+
+// Person.prototype.calcAge = function () {
+//   return 2022 - this.birthYear;
+// };
+
+// console.log(bart.calcAge());
+// console.log(jonas.calcAge());
+
+// const Car = function (make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// };
+
+// Car.prototype.accelerate = function () {
+//   this.speed += 10;
+//   console.log(this.speed);
+// };
+
+// Car.prototype.brake = function () {
+//   this.speed -= 5;
+//   console.log(this.speed);
+// };
+
+// const car1 = new Car("BMW", 120);
+// const car2 = new Car("Mercedes", 95);
+
+// car1.accelerate();
+// car1.accelerate();
+// car1.brake();
+// car1.brake();
+// car1.brake();
+// car1.accelerate();
+
+/* Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.*/
+
+// tel naar beneden vanaf num tot 1
+// maak een total variable
+
+// var summation = function (num) {
+//   let total = 0;
+//   for (let i = num; num >= 1; num--) {
+//     total += num;
+//   }
+//   return total;
+// };
+
+// console.log(summation(8));
+
+// var min = function (list) {
+//   return Math.min(...list);
+// };
+
+// var max = function (list) {
+//   return Math.max(...list);
+// };
+
+// min([4, 6, 2, 1, 9, 63, -134, 566]);
+// max([4, 6, 2, 1, 9, 63, -134, 566]);
+
+// const grow = (x) => {
+//   let total = 1;
+//   for (let i = 0; i < x.length; i++) {
+//     total *= x[i];
+//   }
+//   return total;
+// };
+
+// console.log(grow([4, 1, 1, 1, 4]));
+
+// const even_or_odd = (number) => {
+//   if (number % 2 === 0) {
+//     return "Even";
+//   }
+//   return "Odd";
+// };
+
+// console.log(even_or_odd(-42));
+// console.log(even_or_odd(-423));
+
+// const betterThanAverage = (classPoints, yourPoints) => {
+//   let sum = 0;
+//   classPoints.map((element) => (sum += element));
+//   const better = sum / classPoints.push(yourPoints) < yourPoints ? true : false;
+//   return better;
+// };
+
+// console.log(betterThanAverage([2, 3], 5));
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+
+// class Club {
+//   // constructur is een method van de class
+//   constructor(name, type, members) {
+//     this.name = name;
+//     this.type = type;
+//     this.members = members;
+//     this.ContactInformation =
+//     };
+//   }
+
+//   class ContactInformation {
+//     constructor(adress, phonenumber, contactperson) {
+//       this.adress = adress;
+//       this.phonenumber = phonenumber;
+//       this.contactperson = contactperson;
+//     }
+//   };
+
+// const ajax = new Club(
+//   "Ajax",
+//   "Voetbal",
+//   new ContactInformation(
+//     150000,
+//     "088-18 3 1900",
+//     "Johan Cruijff Boulevard 1, 1100 DL Amsterdam"
+//   )
+// );
+
+// const petProto = {
+//   name: this.name,
+//   species: this.species,
+// };
+
+// const dog = Object.create(petProto);
+// dog.name = "Bas";
+// dog.species = "Dog";
+// console.log(dog);
+
+// const rabbit = Object.create(petProto);
+// rabbit.name = "JoJo";
+// rabbit.species = "Rabbit";
+// console.log(rabbit);
+
+// const cat = Object.create(petProto);
+// cat.name = "catniss";
+// cat.species = "cat";
+// console.log(cat);
+
+// const turtle = Object.create(petProto);
+// turtle.name = "Leonardo";
+// turtle.species = "Turtle";
+// console.log(turtle);
+
+// const hamster = Object.create(petProto);
+// hamster.name = "Fufu";
+// hamster.species = "Hamster";
+// console.log(hamster);
+
+// console.log("----------------------");
+
+// class PetFive {
+//   constructor(name, species) {
+//     this.name = name;
+//     this.species = species;
+//   }
+// }
+
+// const dog = new PetFive("Bas", "Dog");
+// const hamster = new PetFive("Fufu", "Hamster");
+// const cat = new PetFive("Catniss", "Cat");
+
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  return 2022 - this.birthYear;
+};
+
+// the child constructor krijgt dezelfde argumenten als de parent constructor aangevuld met extra argumenten
+const Student = function(firstName, birthYear)
