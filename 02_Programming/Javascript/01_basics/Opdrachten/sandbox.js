@@ -404,17 +404,17 @@
 // const turtle = Object.create(petFour);
 // const hamster = Object.create(Fufu);
 
-const people = [
-  { name: "Dianne", age: 38 },
-  { name: "Sander", age: 43 },
-  { name: "Gerard", age: 73 },
-  { name: "Anne", age: 38 },
-  { name: "Marjo", age: 74 },
-];
-console.table(people);
+// const people = [
+//   { name: "Dianne", age: 38 },
+//   { name: "Sander", age: 43 },
+//   { name: "Gerard", age: 73 },
+//   { name: "Anne", age: 38 },
+//   { name: "Marjo", age: 74 },
+// ];
+// console.table(people);
 
-people.sort((a, b) => a.age - b.age);
-console.table(people);
+// people.sort((a, b) => a.age - b.age);
+// console.table(people);
 
 // class Club {
 //   constructor(name, type, members) {
@@ -669,14 +669,156 @@ Write a function that will take the number of petals of each flower and return t
 // const hamster = new PetFive("Fufu", "Hamster");
 // const cat = new PetFive("Catniss", "Cat");
 
-const Person = function (firstName, birthYear) {
-  this.firstName = firstName;
-  this.birthYear = birthYear;
-};
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
 
-Person.prototype.calcAge = function () {
-  return 2022 - this.birthYear;
-};
+// Person.prototype.calcAge = function () {
+//   return 2022 - this.birthYear;
+// };
 
-// the child constructor krijgt dezelfde argumenten als de parent constructor aangevuld met extra argumenten
-const Student = function(firstName, birthYear)
+// // the child constructor krijgt dezelfde argumenten als de parent constructor aangevuld met extra argumenten
+// const Student = function(firstName, birthYear)
+
+// function sumArray(array) {
+//   if (array === null || array === undefined || array.length <= 2) {
+//     return 0;
+//   } else {
+//     const max = Math.max(...array);
+//     const min = Math.min(...array);
+//     const total = array.reduce((accumulator, element) => {
+//       return accumulator + element;
+//     }, 0);
+//     return total - max - min;
+//   }
+// }
+
+// console.log(sumArray(null));
+// console.log(sumArray([]));
+// console.log(sumArray([3]));
+// console.log(sumArray([3, 5]));
+// console.log("--------------");
+// console.log(sumArray([6, 2, 1, 8, 10]));
+// console.log(sumArray([0, 1, 6, 10, 10]));
+// console.log(sumArray([-6, -20, -1, -10, -12]));
+// console.log(sumArray([-6, 20, -1, 10, -12]));
+
+// function areYouPlayingBanjo(name) {
+//   const plays =
+//     name.toLowerCase()[0] === "r"
+//       ? `${name} plays banjo`
+//       : `${name} does not play banjo`;
+//   return plays;
+// }
+
+// console.log(areYouPlayingBanjo("Adam"));
+
+// const petProto = {
+//   name: "Default",
+//   species: "Default",
+// };
+
+// const dog = Object.create(petProto);
+// dog.name = "Bas";
+// dog.species = "Dog";
+// console.log(dog);
+
+// const rabbit = Object.create(petProto);
+// rabbit.name = "JoJo";
+// rabbit.species = "Rabbit";
+// console.log(rabbit);
+
+// // Person constructor (blauwdruk van een persoon)
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
+
+// // method gecreeerd buiten de function constructor
+// Person.prototype.calcAge = function () {
+//   console.log(2022 - this.birthYear);
+// };
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// // Koppel HIER het sudent prototype aan het Person prototype met Object.create()
+// // Als je het na de method definieerd dan verdwijnt je method omdat er een leeg object wordt gemaakt.
+// // het Student.prototype is nu een object die erft van Person.prototype
+// Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study (this.course)`);
+// };
+
+// const mike = new Student("Mike", 2000, "Computer Science");
+// console.log(mike);
+// mike.calcAge(); // je gebruikt nu de method die gedefinieerd is in het Person object.
+
+// class Person {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge() {
+//     console.log(2022 - this.birthYear);
+//   }
+// }
+
+// // uses extends to inherit from person class
+// class Student extends Person {
+//   // add additional arguments, in this case course
+//   constructor(firstName, birthYear, course) {
+//     // Call the super function which is basically the constructor function of the parent class. This always needs to happen first because the super function creates the this keyword! Als arguments gebruik je dezelfde arguments als in de Person class
+//     super(firstName, birthYear);
+//     this.course = course;
+//   }
+//   introduce() {
+//     console.log(`My name is ${this.firstName} and I study ${this.course})`);
+//   }
+// }
+
+// const martha = new Student("Martha", 1980, "Computer Science");
+// console.log(martha);
+// martha.introduce();
+// martha.calcAge(); // is afkomstig uit de parent class genaamd Person
+
+// var number = function (busStops) {
+//   let passengerIn = 0;
+//   let passengerOut = 0;
+//   for (let i = 0; i < busStops.length; i++) {
+//     passengerIn += busStops[i][0];
+//     passengerOut += busStops[i][1];
+//   }
+//   return passengerIn - passengerOut;
+// };
+
+// console.log(
+//   number([
+//     [3, 0],
+//     [9, 1],
+//     [4, 10],
+//     [12, 2],
+//     [6, 1],
+//     [7, 10],
+//   ])
+// );
+
+// // index 0 = [10,0]
+// // index 1 = [3,5]
+// //index 2 = [5,8]
+
+// function find_average(array) {
+//   if (array.length < 1) {
+//     return 0;
+//   } else {
+//     return array.reduce((accumulator, element) => {
+//       return accumulator + element / array.length;
+//     }, 0);
+//   }
+// }
+
+// console.log(find_average([1, 2, 3, 4]));
