@@ -29,7 +29,6 @@ video,
 canvas,
 svg {
   display: block;
-  width: 100%;
 }
 
 input,
@@ -60,6 +59,72 @@ a {
 #root,
 #__next {
   isolation: isolate;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media screen and (max-width: 820px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 5.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+@media screen and (max-width: 820px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+@media screen and (max-width: 820px) {
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -114,4 +179,24 @@ a {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 2;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  margin: auto;
+  max-width: 600px;
+  border: 10px solid black;
+  overflow: hidden;
+}
+.carousel__slide {
+  display: flex;
+  height: 400px;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
