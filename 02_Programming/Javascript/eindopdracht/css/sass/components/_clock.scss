@@ -1,0 +1,61 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 129, 157, 1) 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+.clock {
+  width: 400px;
+  height: 400px;
+  border-radius: 500px;
+  background-color: #00819d;
+  position: relative;
+
+  &__hand {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(-50%, -50%);
+    width: calc(50% - 40px);
+    height: 6px;
+    background-color: #ffffff;
+    transform-origin: 100%;
+    /* transform-origin 100% zorgt ervoor dat de wijzers vanuit het beginpunt roteren en niet vanuit het midden van zichzelf */
+    transform: rotate(90deg);
+  }
+
+  .hour {
+    width: calc(50% - 80px);
+    /* transform property wordt dynamisch gegenereerd door javascript */
+  }
+
+  .second {
+    height: 2px;
+    width: calc(50% - 20px);
+    background-color: #9d1b00;
+    /* transform property wordt dynamisch gegenereerd door javascript */
+  }
+
+  &__dot {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2;
+  }
+}

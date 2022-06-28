@@ -6,22 +6,28 @@ Logica
 
 - Genereer de huidige datum en sla deze op in een nieuwe variabele met de new Date() method "When called as a function, returns a string representation of the current date and time."
 
-- Genereer het aanta seconden op basis van de new Date() m.b.v de get.Seconds() method. "The getSeconds() method returns the seconds in the specified date according to local time.""
+- Genereer het aanta seconden/minuten en uren op basis van de new Date() m.b.v de getSeconds(), getMinutes() en getHours() method. 
 
-- Berkenen het aantal graden dat de wijzer moet transformen op basis van het aantal seconden m.b.v de formule seconden / 60 * 360  
+- Berkenen het aantal graden dat de wijzer moet transformen op basis van het aantal seconden, minuten en uren.
 
-- Voeg de transform: rotate property toe op basis van de berekende aantal graden.
+- Voeg dynamisch de transform: rotate property toe aan de verschillende classes op basis van de berekende aantal graden met behulp van .style property
 
-- zorg ervoor dat de functie om het aantal seconden te berekenen iedere seconde wordt gecalled met setInterval (setInterval(functie, vertraging))
+- Zorg ervoor dat de functie iedere seconde gecalled wordt met setInterval (setInterval(functie, vertraging))
 
 */
 
 const seconds = document.querySelector(".second");
 const minutes = document.querySelector(".minute");
 const hours = document.querySelector(".hour");
+const timeOffset = document.querySelector(".timezone__offset");
 
 const clock = function () {
+  // let op! de today variable kan niet buiten de functie geplaatst worden, omdat je deze bij iedere functie call wilt genereren en niet enkel bij het laden van de pagina.
   const today = new Date();
+
+  // console.log(today);
+  // console.log(today.toLocaleString("en-US"));
+
   // bereken seconden
   const secondsPassed = today.getSeconds();
   const secondsDegrees = (secondsPassed / 60) * 360 + 90;
