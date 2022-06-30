@@ -267,21 +267,27 @@ p {
   width: 30%;
 }
 .search__group {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 100px;
   display: flex;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 .search__input {
   border: 0;
   padding: 1rem;
   outline: 0;
   flex-grow: 1;
+  font-size: 1.5rem;
+  border-radius: 100px;
 }
 .search__btn {
   align-self: center;
   background-color: #fff;
   border: none;
+  cursor: pointer;
+}
+.search__btn :hover {
+  color: red;
 }
 .search__icon {
   margin: 4px;
