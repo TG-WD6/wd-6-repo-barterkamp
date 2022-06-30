@@ -5,9 +5,6 @@ const images = document.querySelectorAll(".carousel__image"); // nodelist
 const btnPrevious = document.querySelector(".btn__previous");
 const btnNext = document.querySelector(".btn__next");
 
-// zodra je op de next button klikt moet de volgende image in de rij verschijnen (hij loopt omhoog)
-// zodra je op de previous button klikt moet de vorige image in de rij verschijnen (hij loopt omlaag)
-
 let counter = 1;
 const imageWidth = images[0].clientWidth;
 

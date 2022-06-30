@@ -1,0 +1,31 @@
+.search {
+  width: 30%;
+
+  &__group {
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    display: flex;
+    padding: 0.5rem 1rem;
+  }
+
+  &__input {
+    border: 0;
+    padding: 1rem;
+    outline: 0;
+    flex-grow: 1;
+  }
+
+  &__btn {
+    align-self: center;
+    background-color: #fff;
+    border: none;
+  }
+
+  &__icon {
+    margin: 4px;
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    color: gray;
+  }
+}
