@@ -189,14 +189,76 @@ body {
   align-items: center;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.heading__subtitle {
+  font-size: 2rem;
+}
+
 .carousel {
-  margin: auto;
+  margin: 0 auto;
   max-width: 600px;
-  border: 10px solid black;
+  border: 2px solid black;
   overflow: hidden;
+  position: relative;
 }
 .carousel__slide {
   display: flex;
   height: 400px;
   width: 100%;
+}
+.carousel__button-left {
+  background-color: black;
+  height: 400px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+.carousel__button-left .btn__previous {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 5px;
+  z-index: 2;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+}
+.carousel__button-left .btn__previous svg {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.carousel__button-right {
+  background-color: black;
+  height: 400px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.carousel__button-right .btn__next {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 5px;
+  z-index: 2;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+}
+.carousel__button-right .btn__next svg {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */
