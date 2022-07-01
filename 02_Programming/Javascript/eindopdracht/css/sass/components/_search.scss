@@ -2,37 +2,53 @@
   width: 30%;
 
   &__group {
-    border: 2px solid #ccc;
-    border-radius: 100px;
-    display: flex;
-    padding: 0 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
   }
 
   &__input {
+    border-radius: 100px;
     border: 0;
-    padding: 1rem;
-    outline: 0;
     flex-grow: 1;
     font-size: 1.5rem;
-    border-radius: 100px;
+    outline: 0;
+    padding-left: 2rem;
+    width: 80%;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+  &__result {
+    margin-left: 2rem;
+    font-size: 1.5rem;
   }
 
   &__btn {
     align-self: center;
-    background-color: #fff;
+    background-color: red;
+    border-radius: 50%;
     border: none;
     cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 12px;
+    transition: all 0.2s ease-in;
 
-    :hover {
-      color: red;
+    &:hover {
+      background-color: #8b0000;
     }
   }
 
   &__icon {
-    margin: 4px;
     align-self: center;
-    width: 25px;
-    height: 25px;
-    color: gray;
+    color: white;
+    height: 15px;
+    margin: 4px;
+    width: 15px;
   }
 }
