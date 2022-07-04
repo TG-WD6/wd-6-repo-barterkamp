@@ -21,7 +21,6 @@ LOGICA
 - Push iedere nieuw zoekwoord (de input.value) naar de searchterms array.
 - Sla de  array op in het locale geheugen met localStorage.setItem.
 - Maak het inputfield leeg
-- Return de searchterms array uit de functie om te gebruiken in de filterfunctie
 */
 
 searchBtn.addEventListener("click", (e) => {
