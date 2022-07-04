@@ -1,5 +1,6 @@
 .search {
   width: 30%;
+  height: 100px;
 
   &__group {
     border-radius: 20px;
@@ -26,6 +27,15 @@
   &__result {
     margin-left: 2rem;
     font-size: 1.5rem;
+  }
+
+  &__list {
+    display: none;
+    transition: all 0.2s;
+
+    &.show {
+      display: block;
+    }
   }
 
   &__btn {
