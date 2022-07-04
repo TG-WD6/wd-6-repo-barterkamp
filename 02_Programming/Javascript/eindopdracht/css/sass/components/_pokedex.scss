@@ -1,11 +1,63 @@
 .pokedex {
   display: grid;
   max-width: 1100px;
-  border: 1px solid black;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
   &__card {
-    border: 1px solid red;
-    padding: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+  }
+
+  &__header {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  &__sprite {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__type-1 {
+    background-color: green;
+    padding: 0.5rem 2rem;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  &__type-2 {
+    background-color: purple;
+    padding: 0.5rem 2rem;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  &__table {
+    // border-collapse: collapse;
+    border-spacing: 20px 0;
+    font-size: 1.5rem;
+  }
+
+  // &__table-row {
+  //   border: 2px solid green;
+  // }
+
+  &__table-column {
+    &:nth-child(2n) {
+      font-weight: bold;
+    }
   }
 }
