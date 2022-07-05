@@ -6,12 +6,12 @@ async function populate() {
   const request = new Request(requestData);
 
   const response = await fetch(request);
-  const pokeDex = await response.json();
+  let pokeDex = await response.json();
 
   // generate cards
   generateBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    generateCard(pokeDex, selectEl.value);
+    generateCard(pokeDex);
   });
 
   // clear cards
@@ -26,16 +26,26 @@ const generateBtn = document.querySelector(".generate");
 const pokeDexContainer = document.querySelector(".pokedex");
 const selectEl = document.querySelector("#generation");
 
-function generateCard(pokeDex, select) {
-  for (const pokemon of pokeDex) {
-    console.log(select);
-    // als de select value 1 is genereer dan alle kaarten van 1 tot 151 etc.
-    if (pokemon.id > 20) {
-      return;
-    }
+function generateCard(pokeDex) {
+  const filteredPokeDex = pokeDex.filter((element) => {
+    if (+selectEl.value === 1) {
+      return element.id <= 151;
+    } else if (+selectEl.value === 2) {
+      return element.id >= 152 && element.id <= 251;
+    } else if (+selectEl.value === 3) {
+      return element.id >= 252 && element.id <= 386;
+    } else if (+selectEl.value === 4) {
+      return element.id >= 387 && element.id <= 493;
+    } else if (+selectEl.value === 5) {
+      return element.id >= 494 && element.id <= 649;
+    } else if (+selectEl.value === 6) {
+      return element.id >= 650 && element.id <= 721;
+    } else if (+selectEl.value === 7) {
+      return element.id >= 722 && element.id <= 809;
+    } else return;
+  });
 
-    // individual components in JSON array
-
+  for (const pokemon of filteredPokeDex) {
     const pokemonId = pokemon.id;
     const pokemonName = pokemon.name.english;
     const pokemonTypes = pokemon.type;
