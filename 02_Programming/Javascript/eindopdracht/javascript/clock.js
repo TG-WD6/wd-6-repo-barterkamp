@@ -19,7 +19,6 @@ Logica
 const seconds = document.querySelector(".second");
 const minutes = document.querySelector(".minute");
 const hours = document.querySelector(".hour");
-const timeOffset = document.querySelector(".timezone__offset");
 
 const clock = function () {
   // let op! de today variable kan niet buiten de functie geplaatst worden, omdat je deze bij iedere functie call wilt genereren en niet enkel bij het laden van de pagina.

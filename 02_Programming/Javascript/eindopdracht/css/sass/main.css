@@ -61,14 +61,6 @@ a {
   isolation: isolate;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -325,51 +317,92 @@ p {
   width: 15px;
 }
 
-.pokedex {
+body {
+  background-color: rgb(255, 203, 5);
+}
+
+.wrapper {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 5rem;
+}
+.wrapper form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.wrapper form button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+.wrapper form button.clear {
+  background-color: red;
+}
+.wrapper form button.generate {
+  background-color: #3466af;
+}
+.wrapper form select {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: black;
+  border: none;
+}
+.wrapper .pokedex {
   display: grid;
   max-width: 1100px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
 }
-.pokedex__card {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.wrapper .pokedex__card {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+  background-color: #fff;
 }
-.pokedex__header {
+.wrapper .pokedex__header {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
 }
-.pokedex__sprite {
+.wrapper .pokedex__sprite {
   display: inline-block;
   vertical-align: middle;
 }
-.pokedex__type {
+.wrapper .pokedex__types {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.pokedex__type-1 {
-  background-color: green;
+.wrapper .pokedex__type {
   padding: 0.5rem 2rem;
   color: #fff;
   border-radius: 5px;
-}
-.pokedex__type-2 {
-  background-color: purple;
-  padding: 0.5rem 2rem;
-  color: #fff;
-  border-radius: 5px;
-}
-.pokedex__table {
-  border-spacing: 20px 0;
   font-size: 1.5rem;
 }
-.pokedex__table-column:nth-child(2n) {
+.wrapper .pokedex .hide {
+  display: none;
+}
+.wrapper .pokedex__table {
+  border-spacing: 20px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.wrapper .pokedex__table-column:nth-child(2n) {
   font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

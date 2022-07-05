@@ -5,42 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../javascript/pokedex.js" defer></script>
-    
+
     <link rel="stylesheet" href="../css/sass/main.css" />
     <title>JSON Cards</title>
   </head>
   <body>
-   
-    <section class="pokedex"">
-      <article class="pokedex__card">
-        <h2 class="pokedex__header">name<span><img class="pokedex__sprite" src="../images/Pokemon-sprites/2MS.png" alt=""></span>#002</h2>
-        <div class="pokedex__type">
-          <div class="pokedex__type-1">grass</div>
-          <div class="pokedex__type-2">poison</div>
-        </div>
-        <div class="pokedex__table">
-          <table class="pokedex__table">
-            <tr class="pokedex__table-row">
-              <td class="pokedex__table-column">HP:</td>
-              <td class="pokedex__table-column">60</td>
-              <td class="pokedex__table-column">SPEED:</td>
-              <td class="pokedex__table-column">60</td>
-            </tr>
-            <tr class="pokedex__table-row">
-              <td class="pokedex__table-column">ATK:</td>
-              <td class="pokedex__table-column">62</td>
-              <td class="pokedex__table-column">SP.ATK:</td>
-              <td class="pokedex__table-column">80</td>
-            </tr>
-            <tr class="pokedex__table-row">
-              <td class="pokedex__table-column">DEF:</td>
-              <td class="pokedex__table-column">63</td>
-              <td class="pokedex__table-column">SPDEF:</td>
-              <td class="pokedex__table-column">80</td>
-            </tr>
-          </table>
-        </div>
-      </article>
-    </section>
+    <div class="wrapper">
+      <header class="logo">
+        <img src="../images/pokemon-logo.png" alt="" />
+      </header>
+      <form>
+        <select name="generation" id="generation">
+          <option value="1">Generation 1</option>
+          <option value="2">Generation 2</option>
+          <option value="3">Generation 3</option>
+          <option value="4">Generation 4</option>
+          <option value="5">Generation 5</option>
+          <option value="6">Generation 6</option>
+        </select>
+        <button class="generate">Generate Pokemon!</button>
+        <button class="clear">clear</button>
+      </form>
+
+      <section class="pokedex">
+        <!-- container voor de pokedex kaarten -->
+      </section>
+    </div>
   </body>
 </html>
