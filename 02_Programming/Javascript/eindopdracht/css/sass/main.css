@@ -181,6 +181,14 @@ p {
   z-index: 2;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -255,6 +263,14 @@ p {
   border-radius: 50%;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .search {
   width: 30%;
   height: 100px;
@@ -317,10 +333,6 @@ p {
   width: 15px;
 }
 
-body {
-  background-color: rgb(255, 203, 5);
-}
-
 .wrapper {
   margin-top: 5rem;
   width: 100%;
@@ -343,19 +355,26 @@ body {
   border: none;
   color: #fff;
   border-radius: 5px;
+  transition: all 0.3s;
 }
 .wrapper form button.clear {
-  background-color: red;
+  background-color: #ff0000;
+}
+.wrapper form button.clear:hover {
+  background-color: #ff6666;
 }
 .wrapper form button.generate {
   background-color: #3466af;
+}
+.wrapper form button.generate:hover {
+  background-color: #4875b7;
 }
 .wrapper form select {
   font-size: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
   color: black;
-  border: none;
+  border: 0.5px solid black;
 }
 .wrapper .pokedex {
   display: grid;
@@ -363,8 +382,21 @@ body {
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
+  position: relative;
 }
-.wrapper .pokedex__card {
+.wrapper .pokedex__container {
+  position: relative;
+}
+.wrapper .pokedex__container:hover .back {
+  opacity: 1;
+}
+.wrapper .pokedex__container:hover .front {
+  opacity: 0;
+}
+.wrapper .pokedex__card,
+.wrapper .pokedex__image {
+  max-width: 275px;
+  height: 300px;
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
@@ -373,7 +405,24 @@ body {
   gap: 30px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
-  background-color: #fff;
+}
+.wrapper .pokedex .front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  background-color: #ffcb05;
+}
+.wrapper .pokedex .back {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.wrapper .pokedex__image {
+  justify-content: center;
 }
 .wrapper .pokedex__header {
   margin: 0;
@@ -405,4 +454,4 @@ body {
 }
 .wrapper .pokedex__table-column:nth-child(2n) {
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
