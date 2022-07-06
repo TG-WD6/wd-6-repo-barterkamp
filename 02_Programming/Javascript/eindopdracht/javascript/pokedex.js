@@ -17,13 +17,13 @@ async function populate() {
   // clear cards
   clearBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    pokeDexContainer.innerHTML = "";
+    pokeDexGrid.innerHTML = "";
   });
 }
 
 const clearBtn = document.querySelector(".clear");
 const generateBtn = document.querySelector(".generate");
-const pokeDexContainer = document.querySelector(".pokedex");
+const pokeDexGrid = document.querySelector(".pokedex");
 const selectEl = document.querySelector("#generation");
 
 function generateCard(pokeDex) {
@@ -51,7 +51,28 @@ function generateCard(pokeDex) {
     const pokemonTypes = pokemon.type;
     const pokemonBase = pokemon.base;
 
-    // article
+    // card container
+
+    const pokeDexContainer = document.createElement("div");
+    pokeDexContainer.classList.add("pokedex__container");
+    pokeDexGrid.appendChild(pokeDexContainer);
+
+    ///////////////////
+    // front of card //
+    ///////////////////
+
+    const pokeDexImageFront = document.createElement("div");
+    pokeDexImageFront.classList.add("pokedex__image", "front");
+    pokeDexContainer.appendChild(pokeDexImageFront);
+
+    const pokeDexFrontImage = document.createElement("img");
+    pokeDexFrontImage.src = `../images/Pokemon-images/${pokemonId}.png`;
+    pokeDexImageFront.appendChild(pokeDexFrontImage);
+
+    //////////////////
+    // back of card //
+    //////////////////
+
     const pokeDexCard = document.createElement("article");
     pokeDexCard.classList.add("pokedex__card");
     pokeDexContainer.appendChild(pokeDexCard);
@@ -61,7 +82,7 @@ function generateCard(pokeDex) {
     pokeDexHeader.classList.add("pokedex__header");
     pokeDexHeader.textContent = `${pokemonName} #${pokemonId}`;
 
-    // image sprite
+    // images
     const pokeDexSprite = document.createElement("img");
     pokeDexSprite.classList.add("pokedex__sprite");
     pokeDexSprite.src = `../images/Pokemon-sprites/${pokemonId}MS.png`;
@@ -113,11 +134,9 @@ function generateCard(pokeDex) {
 
     for (const color of typeColors) {
       const pokemonColor = Object.keys(color).join("").toLowerCase();
-      if (firstPokeDexType.textContent.toLocaleLowerCase() === pokemonColor) {
+      if (firstPokeDexType.textContent.toLowerCase() === pokemonColor) {
         firstPokeDexType.style.backgroundColor = `${color[pokemonColor]}`;
-      } else if (
-        secondPokeDexType.textContent.toLocaleLowerCase() === pokemonColor
-      ) {
+      } else if (secondPokeDexType.textContent.toLowerCase() === pokemonColor) {
         secondPokeDexType.style.backgroundColor = `${color[pokemonColor]}`;
       }
     }
