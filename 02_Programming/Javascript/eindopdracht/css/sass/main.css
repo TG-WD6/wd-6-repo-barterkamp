@@ -15,7 +15,7 @@ html {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -139,46 +139,101 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
+.timezone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.timezone h3 {
+  color: #fff;
+}
+
 .clock {
   width: 400px;
   height: 400px;
-  border-radius: 500px;
+  border-radius: 50%;
   background-color: #00819d;
   position: relative;
 }
-.clock__hand {
+.clock::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateX(-50%, -50%);
-  width: calc(50% - 40px);
-  height: 6px;
-  background-color: #ffffff;
-  transform-origin: 100%;
-  /* transform-origin 100% zorgt ervoor dat de wijzers vanuit het beginpunt roteren en niet vanuit het midden van zichzelf */
-  transform: rotate(90deg);
-}
-.clock .hour {
-  width: calc(50% - 80px);
-  /* transform property wordt dynamisch gegenereerd door javascript */
-}
-.clock .second {
-  height: 2px;
-  width: calc(50% - 20px);
-  background-color: #9d1b00;
-  /* transform property wordt dynamisch gegenereerd door javascript */
-}
-.clock__dot {
-  color: #fff;
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  position: absolute;
+  background-color: #fff;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+.clock__hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 50%;
+  background-color: #ffffff;
+  transform-origin: bottom;
+  z-index: 1;
+}
+.clock__hand.hour {
+  background-color: #fff;
+  height: 25%;
+  width: 5px;
+}
+.clock__hand.minute {
+  height: 38%;
+}
+.clock__hand.second {
+  height: 38%;
+  width: 2px;
+  background-color: red;
+}
+.clock__number {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  transform: rotate(0);
+}
+.clock__number.number1 {
+  transform: rotate(30deg);
+}
+.clock__number.number2 {
+  transform: rotate(60deg);
+}
+.clock__number.number3 {
+  transform: rotate(90deg);
+}
+.clock__number.number4 {
+  transform: rotate(120deg);
+}
+.clock__number.number5 {
+  transform: rotate(150deg);
+}
+.clock__number.number6 {
+  transform: rotate(180deg);
+}
+.clock__number.number7 {
+  transform: rotate(210deg);
+}
+.clock__number.number8 {
+  transform: rotate(240deg);
+}
+.clock__number.number9 {
+  transform: rotate(270deg);
+}
+.clock__number.number10 {
+  transform: rotate(300deg);
+}
+.clock__number.number11 {
+  transform: rotate(330deg);
 }
 
 main {
@@ -343,12 +398,13 @@ main {
   margin-bottom: 5rem;
   gap: 5rem;
 }
-.wrapper form {
+
+form {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-.wrapper form button {
+form button {
   padding: 0.7rem 1.5rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -357,26 +413,27 @@ main {
   border-radius: 5px;
   transition: all 0.3s;
 }
-.wrapper form button.clear {
+form button.clear {
   background-color: #ff0000;
 }
-.wrapper form button.clear:hover {
+form button.clear:hover {
   background-color: #ff6666;
 }
-.wrapper form button.generate {
+form button.generate {
   background-color: #3466af;
 }
-.wrapper form button.generate:hover {
+form button.generate:hover {
   background-color: #4875b7;
 }
-.wrapper form select {
+form select {
   font-size: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
   color: black;
   border: 0.5px solid black;
 }
-.wrapper .pokedex {
+
+.pokedex {
   display: grid;
   max-width: 1100px;
   gap: 20px;
@@ -384,29 +441,27 @@ main {
   margin-top: 2rem;
   position: relative;
 }
-.wrapper .pokedex__container {
+.pokedex__container {
   position: relative;
 }
-.wrapper .pokedex__container:hover .back {
+.pokedex__container:hover .back {
   opacity: 1;
 }
-.wrapper .pokedex__container:hover .front {
+.pokedex__container:hover .front {
   opacity: 0;
 }
-.wrapper .pokedex__card,
-.wrapper .pokedex__image {
-  max-width: 275px;
-  height: 300px;
+.pokedex__card, .pokedex__image {
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
 }
-.wrapper .pokedex .front {
+.pokedex .front {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -416,42 +471,40 @@ main {
   width: 100%;
   transition: 0.5s ease-in-out;
   background-color: #ffcb05;
+  border-radius: 10px;
 }
-.wrapper .pokedex .back {
+.pokedex .back {
   opacity: 0;
   transition: 0.5s ease-in-out;
 }
-.wrapper .pokedex__image {
-  justify-content: center;
-}
-.wrapper .pokedex__header {
+.pokedex__header {
   margin: 0;
   font-size: 1.9rem;
 }
-.wrapper .pokedex__sprite {
+.pokedex__sprite {
   display: inline-block;
   vertical-align: middle;
 }
-.wrapper .pokedex__types {
+.pokedex__types {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.wrapper .pokedex__type {
+.pokedex__type {
   padding: 0.5rem 2rem;
   color: #fff;
   border-radius: 5px;
   font-size: 1.5rem;
 }
-.wrapper .pokedex .hide {
+.pokedex .hide {
   display: none;
 }
-.wrapper .pokedex__table {
+.pokedex__table {
   border-spacing: 20px 0;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-.wrapper .pokedex__table-column:nth-child(2n) {
+.pokedex__table-column:nth-child(2n) {
   font-weight: bold;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
