@@ -1,0 +1,158 @@
+.wrapper {
+  height: 100%;
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  & button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &.clear {
+      background-color: #ff0000;
+
+      &:hover {
+        background-color: #ff6666;
+      }
+    }
+
+    &.generate {
+      background-color: #3466af;
+
+      &:hover {
+        background-color: #4875b7;
+      }
+    }
+  }
+
+  & select {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    color: black;
+    border: 0.5px solid black;
+  }
+}
+
+.pokedex {
+  display: grid;
+  max-width: 1100px;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+  position: relative;
+
+  /// nieuw
+  &__container {
+    position: relative;
+    // overflow: hidden;
+
+    &:hover .back {
+      opacity: 1;
+    }
+
+    &:hover .front {
+      opacity: 0;
+    }
+  }
+
+  &__card,
+  &__image {
+    min-width: 275px;
+    min-height: 300px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+  }
+
+  & .front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    background-color: #ffcb05;
+    border-radius: 10px;
+  }
+
+  & .back {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  &__header {
+    margin: 0;
+    font-size: 1.9rem;
+  }
+
+  &__sprite {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__type {
+    padding: 0.5rem 2rem;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  // &__type-2 {
+  //   padding: 0.5rem 2rem;
+  //   color: #000;
+  //   border-radius: 5px;
+  //   font-size: 1.5rem;
+
+  &__table {
+    // border-collapse: collapse;
+    border-spacing: 20px 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  // &__table-row {
+  //   border: 2px solid green;
+  // }
+
+  &__table-column {
+    &:nth-child(2n) {
+      font-weight: bold;
+    }
+  }
+}

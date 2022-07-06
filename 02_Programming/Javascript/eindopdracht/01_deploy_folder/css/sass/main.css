@@ -1,0 +1,503 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media screen and (max-width: 820px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 5.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+@media screen and (max-width: 820px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+@media screen and (max-width: 820px) {
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(0, 129, 157) 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.clock {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #00819d;
+  position: relative;
+}
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.clock__hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 50%;
+  background-color: #ffffff;
+  transform-origin: bottom;
+  z-index: 1;
+}
+.clock__hand.hour {
+  background-color: #fff;
+  height: 25%;
+  width: 5px;
+}
+.clock__hand.minute {
+  height: 38%;
+}
+.clock__hand.second {
+  height: 38%;
+  width: 2px;
+  background-color: red;
+}
+.clock__number {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  transform: rotate(0);
+}
+.clock__number.number1 {
+  transform: rotate(30deg);
+}
+.clock__number.number2 {
+  transform: rotate(60deg);
+}
+.clock__number.number3 {
+  transform: rotate(90deg);
+}
+.clock__number.number4 {
+  transform: rotate(120deg);
+}
+.clock__number.number5 {
+  transform: rotate(150deg);
+}
+.clock__number.number6 {
+  transform: rotate(180deg);
+}
+.clock__number.number7 {
+  transform: rotate(210deg);
+}
+.clock__number.number8 {
+  transform: rotate(240deg);
+}
+.clock__number.number9 {
+  transform: rotate(270deg);
+}
+.clock__number.number10 {
+  transform: rotate(300deg);
+}
+.clock__number.number11 {
+  transform: rotate(330deg);
+}
+
+.wrapper {
+  height: 100%;
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+form button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+form button.clear {
+  background-color: #ff0000;
+}
+form button.clear:hover {
+  background-color: #ff6666;
+}
+form button.generate {
+  background-color: #3466af;
+}
+form button.generate:hover {
+  background-color: #4875b7;
+}
+form select {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: black;
+  border: 0.5px solid black;
+}
+
+.pokedex {
+  display: grid;
+  max-width: 1100px;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+  position: relative;
+}
+.pokedex__container {
+  position: relative;
+}
+.pokedex__container:hover .back {
+  opacity: 1;
+}
+.pokedex__container:hover .front {
+  opacity: 0;
+}
+.pokedex__card, .pokedex__image {
+  min-width: 275px;
+  min-height: 300px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
+}
+.pokedex .front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  background-color: #ffcb05;
+  border-radius: 10px;
+}
+.pokedex .back {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.pokedex__header {
+  margin: 0;
+  font-size: 1.9rem;
+}
+.pokedex__sprite {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pokedex__types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.pokedex__type {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.pokedex .hide {
+  display: none;
+}
+.pokedex__table {
+  border-spacing: 20px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.pokedex__table-column:nth-child(2n) {
+  font-weight: bold;
+}
+
+.carousel-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+.carousel-container .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.carousel-container .heading__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.carousel-container .heading__subtitle {
+  font-size: 2rem;
+}
+.carousel-container .carousel {
+  max-width: 600px;
+  border: 2px solid black;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.carousel-container .carousel__slide {
+  display: flex;
+  height: 400px;
+  width: 100%;
+}
+.carousel-container .carousel__button-left {
+  background-color: black;
+  height: 400px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+.carousel-container .carousel__button-left .btn__previous {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 5px;
+  z-index: 2;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+}
+.carousel-container .carousel__button-left .btn__previous svg {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.carousel-container .carousel__button-right {
+  background-color: black;
+  height: 400px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.carousel-container .carousel__button-right .btn__next {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 5px;
+  z-index: 2;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+}
+.carousel-container .carousel__button-right .btn__next svg {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.search-container .search {
+  width: 30%;
+  height: 100px;
+}
+.search-container .search__group {
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+}
+.search-container .search__input {
+  border-radius: 100px;
+  border: 0;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  outline: 0;
+  padding-left: 2rem;
+  width: 80%;
+}
+.search-container .search__input::-moz-placeholder {
+  color: #ccc;
+}
+.search-container .search__input:-ms-input-placeholder {
+  color: #ccc;
+}
+.search-container .search__input::placeholder {
+  color: #ccc;
+}
+.search-container .search__result {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+.search-container .search__list {
+  display: none;
+  transition: all 0.2s;
+}
+.search-container .search__list.show {
+  display: block;
+}
+.search-container .search__btn {
+  align-self: center;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 12px;
+  transition: all 0.2s ease-in;
+}
+.search-container .search__btn:hover {
+  background-color: #8b0000;
+}
+.search-container .search__icon {
+  align-self: center;
+  color: white;
+  height: 15px;
+  margin: 4px;
+  width: 15px;
+}/*# sourceMappingURL=main.css.map */

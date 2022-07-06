@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/sass/main.css" class="src" />
+    <script src="./app.js" defer></script>
+    <title>Eindopdrachten JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <!-- Klok -->
+      <section class="container">
+        <div class="clock">
+          <div class="clock__hand hour"></div>
+          <div class="clock__hand minute"></div>
+          <div class="clock__hand second"></div>
+          <div class="clock__number number1">1</div>
+          <div class="clock__number number2">2</div>
+          <div class="clock__number number3">3</div>
+          <div class="clock__number number4">4</div>
+          <div class="clock__number number5">5</div>
+          <div class="clock__number number6">6</div>
+          <div class="clock__number number7">7</div>
+          <div class="clock__number number8">8</div>
+          <div class="clock__number number9">9</div>
+          <div class="clock__number number10">10</div>
+          <div class="clock__number number11">11</div>
+          <div class="clock__number number12">12</div>
+        </div>
+      </section>
+
+      <!-- Pokedex -->
+
+      <div class="wrapper">
+        <header class="logo">
+          <img src="../images/pokemon-logo.png" alt="" />
+        </header>
+        <form>
+          <select name="generation" id="generation">
+            <option value="1">Generation 1</option>
+            <option value="2">Generation 2</option>
+            <option value="3">Generation 3</option>
+            <option value="4">Generation 4</option>
+            <option value="5">Generation 5</option>
+            <option value="6">Generation 6</option>
+            <option value="7">Generation 7</option>
+          </select>
+          <button class="generate">Generate Pokedex!</button>
+          <button class="clear">clear</button>
+        </form>
+
+        <section class="pokedex">
+          <!-- container voor de dynamisch gegenereerde pokemon kaarten -->
+        </section>
+      </div>
+
+      <!-- carousel -->
+      <div class="carousel-container">
+        <header class="heading">
+          <h1 class="heading__title">weesp in de mist</h1>
+          <h2 class="heading__subtitle">Fotografie: Bart Erkamp</h2>
+        </header>
+        <section class="carousel">
+          <div class="carousel__slide">
+            <img
+              class="carousel__image"
+              id="last"
+              src="../images/Weesp5.jpg"
+              alt=""
+            />
+            <img class="carousel__image" src="../images/Weesp1.jpg" alt="" />
+            <img class="carousel__image" src="../images/Weesp2.jpg" alt="" />
+            <img class="carousel__image" src="../images/Weesp3.jpg" alt="" />
+            <img class="carousel__image" src="../images/Weesp4.jpg" alt="" />
+            <img class="carousel__image" src="../images/Weesp5.jpg" alt="" />
+            <img
+              class="carousel__image"
+              id="first"
+              src="../images/Weesp1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="carousel__button-left">
+            <button class="btn btn__previous">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="carousel__button-right">
+            <button class="btn btn__next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Searchbar -->
+      <div class="search-container">
+        <section class="search">
+          <div class="search__group show">
+            <input
+              type="text"
+              name="search"
+              class="search__input"
+              id="search"
+              placeholder="Enter search term"
+            />
+            <div class="search__result">
+              <ul class="search__list show"></ul>
+              <button class="search__btn">
+                <svg
+                  class="search__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
