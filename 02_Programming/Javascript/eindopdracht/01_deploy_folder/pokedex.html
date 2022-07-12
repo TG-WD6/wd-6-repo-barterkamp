@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../javascript/pokedex.js" defer></script>
+
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <title>PokedDex</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="logo">
+        <img src="../images/pokemon-logo.png" alt="" />
+      </header>
+      <form class="pokedex__form">
+        <select name="generation" id="generation">
+          <option value="1">Generation 1</option>
+          <option value="2">Generation 2</option>
+          <option value="3">Generation 3</option>
+          <option value="4">Generation 4</option>
+          <option value="5">Generation 5</option>
+          <option value="6">Generation 6</option>
+          <option value="7">Generation 7</option>
+        </select>
+        <button class="generate">Generate Pokedex!</button>
+        <button class="clear">clear</button>
+      </form>
+
+      <section class="pokedex">
+        <!-- container voor de dynamisch gegenereerde pokemon kaarten -->
+      </section>
+    </div>
+  </body>
+</html>

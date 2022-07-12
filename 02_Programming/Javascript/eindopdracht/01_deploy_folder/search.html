@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <script src="../javascript/search.js" defer></script>
+    <title>Search Bar</title>
+  </head>
+  <body>
+    <main>
+      <section class="search">
+        <div class="search__group show">
+          <input
+            type="text"
+            name="search"
+            class="search__input"
+            id="search"
+            placeholder="Enter search term"
+          />
+          <div class="search__result">
+            <ul class="search__list show"></ul>
+            <button class="search__btn">
+              <svg
+                class="search__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
