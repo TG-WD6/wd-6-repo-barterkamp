@@ -10,7 +10,7 @@
   flex-direction: column;
   width: 700px;
   gap: 2rem;
-  background-color: #ea9ab2;
+  background-color: #2c3531;
   padding: 3rem;
   border-radius: 4rem;
 
@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
-    background-color: #efcfe3;
+    background-color: #d1e8e2;
     padding: 2rem;
   }
 
@@ -59,6 +59,7 @@
   }
 
   &__reply-btn {
+    background-color: #d1e8e2;
     margin-top: auto;
     margin-bottom: 2rem;
     margin-right: 2rem;
@@ -70,25 +71,28 @@
     font-size: 1.3rem;
 
     &:hover {
-      background-color: #ea9ab2;
+      background-color: #ffcb9a;
     }
   }
 
   &__submit-btn {
     padding: 0.8rem 1rem;
+    background-color: #d1e8e2;
+    font-weight: bold;
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s;
     font-size: 1.3rem;
+    color: #2c3531;
 
     &:hover {
-      background-color: #ea9ab2;
+      background-color: #ffcb9a;
     }
   }
 
   &__input-container {
-    background-color: #b3dee2;
+    background-color: #116466;
     border-radius: 2rem;
     padding: 2rem;
   }
@@ -120,8 +124,9 @@
 
   &__reply-paragraph {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: italic;
+    color: #fff;
   }
 
   &__close-btn {
@@ -130,11 +135,12 @@
     border: none;
     border-radius: 0.5rem;
     color: #000;
+    background-color: #ffcb9a;
     font-weight: bold;
     cursor: pointer;
 
     &:hover {
-      background-color: #ea9ab2;
+      background-color: #d1e8e2;
     }
   }
 }

@@ -1,6 +1,5 @@
 .wrapper {
   margin-top: 5rem;
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -9,10 +8,19 @@
   gap: 5rem;
 }
 
+.logo {
+  width: 100%;
+}
+
 .pokedex__form {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
 
   & button {
     padding: 0.7rem 1.5rem;
@@ -50,14 +58,21 @@
 }
 
 .pokedex {
-  display: grid;
+  display: flex;
   max-width: 1100px;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
+  justify-content: center;
   position: relative;
 
-  /// nieuw
+  // @media screen and (max-width: 450px) {
+  //   .pokedex {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+  // }
+
   &__container {
     position: relative;
 
@@ -72,15 +87,13 @@
 
   &__card,
   &__image {
-    // min-width: 275px;
-    // min-height: 300px;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 2rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
   }

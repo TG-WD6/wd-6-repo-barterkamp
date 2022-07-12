@@ -11,8 +11,8 @@ main {
   height: 100px;
 
   &__group {
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    border-radius: 30px;
+    border: 1px solid black;
     overflow: hidden;
     padding: 1rem;
     position: relative;
@@ -28,7 +28,7 @@ main {
     width: 80%;
 
     &::placeholder {
-      color: #ccc;
+      color: rgba(0, 0, 0, 0.4);
     }
   }
 
