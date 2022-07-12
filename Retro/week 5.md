@@ -2,7 +2,7 @@
 
 ## Wat ging goed
 
-1. De opdrachten lopen voortvarend
+1. De JavaScript opdrachten lopen voortvarend
 
 ## Wat kan er beter?
 
@@ -10,4 +10,4 @@
 
 ## Actiepunten voor volgende week
 
-1. Eindopdracht afmaken
+1. Verder met de opdrachten
