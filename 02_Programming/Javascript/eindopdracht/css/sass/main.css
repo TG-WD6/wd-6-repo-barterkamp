@@ -399,12 +399,12 @@ main {
   gap: 5rem;
 }
 
-form {
+.pokedex__form {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-form button {
+.pokedex__form button {
   padding: 0.7rem 1.5rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -413,19 +413,19 @@ form button {
   border-radius: 5px;
   transition: all 0.3s;
 }
-form button.clear {
+.pokedex__form button.clear {
   background-color: #ff0000;
 }
-form button.clear:hover {
+.pokedex__form button.clear:hover {
   background-color: #ff6666;
 }
-form button.generate {
+.pokedex__form button.generate {
   background-color: #3466af;
 }
-form button.generate:hover {
+.pokedex__form button.generate:hover {
   background-color: #4875b7;
 }
-form select {
+.pokedex__form select {
   font-size: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
@@ -507,4 +507,122 @@ form select {
 }
 .pokedex__table-column:nth-child(2n) {
   font-weight: bold;
+}
+
+.comments-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  gap: 2rem;
+  background-color: #ea9ab2;
+  padding: 3rem;
+  border-radius: 4rem;
+}
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comments__container {
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+.comments__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  background-color: #efcfe3;
+  padding: 2rem;
+}
+.comments__avatar {
+  width: 100%;
+}
+.comments__name, .comments__id, .comments__paragraph {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.comments__content {
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+}
+.comments__link {
+  font-size: 1.3rem;
+}
+.comments__reply-btn {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+}
+.comments__reply-btn:hover {
+  background-color: #ea9ab2;
+}
+.comments__submit-btn {
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+}
+.comments__submit-btn:hover {
+  background-color: #ea9ab2;
+}
+.comments__input-container {
+  background-color: #b3dee2;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.comments__txtinput {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.comments__sender {
+  width: 60%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.comments__reply-container {
+  display: none;
+}
+.comments__reply-container.show {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.comments__reply-paragraph {
+  margin: 0;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.comments__close-btn {
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.comments__close-btn:hover {
+  background-color: #ea9ab2;
 }/*# sourceMappingURL=main.css.map */

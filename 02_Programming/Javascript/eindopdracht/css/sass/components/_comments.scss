@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 10rem;
 }
 
 .comments {
@@ -26,7 +25,6 @@
     background-color: #fff;
     overflow: hidden;
     border-radius: 2rem;
-    border: 2px solid green;
   }
 
   &__profile {
@@ -37,10 +35,17 @@
     gap: 0.2rem;
     background-color: #efcfe3;
     padding: 2rem;
+  }
 
-    & p {
-      margin: 0;
-    }
+  &__avatar {
+    width: 100%;
+  }
+
+  &__name,
+  &__id,
+  &__paragraph {
+    margin: 0;
+    font-size: 1.5rem;
   }
 
   &__content {
@@ -51,29 +56,7 @@
 
   &__link {
     font-size: 1.3rem;
-    display: none;
   }
-
-  & .show-link {
-    display: block;
-  }
-  // &__link {
-  //   display: none;
-  // }
-
-  // &.show-link {
-  //   display: block;
-  // }
-
-  // &__reply-link {
-  //   color: blue;
-  //   font-size: 1.3rem;
-  //   font-style: italic;
-
-  //   &:hover {
-  //     color: #ea9ab2;
-  //   }
-  // }
 
   &__reply-btn {
     margin-top: auto;
@@ -113,24 +96,13 @@
   &__txtinput {
     width: 100%;
     padding: 1rem;
+    font-size: 1.5rem;
   }
 
   &__sender {
     width: 60%;
     padding: 0.5rem;
     font-size: 1.5rem;
-  }
-
-  & .error-message {
-    display: none;
-  }
-
-  & .error {
-    display: block;
-    color: red;
-    font-style: italic;
-    font-size: 1.4rem;
-    font-weight: bold;
   }
 
   // reply section
