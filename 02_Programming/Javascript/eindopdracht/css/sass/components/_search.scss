@@ -1,14 +1,11 @@
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-center(column);
   height: 100vh;
 }
 
 .search {
-  width: 30%;
   height: 100px;
+  width: 30%;
 
   &__group {
     border-radius: 30px;
@@ -33,8 +30,8 @@ main {
   }
 
   &__result {
-    margin-left: 2rem;
     font-size: 1.5rem;
+    margin-left: 2rem;
   }
 
   &__list {
