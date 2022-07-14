@@ -1,12 +1,20 @@
 "use strict";
 
+// async functions automatically return a promise
 async function populate() {
-  const requestData = "../javascript/pokedex.json";
+  const request = new Request(
+    "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+  );
 
-  const request = new Request(requestData);
+  // new Request(input, options) defines the resource that you wish to fetch. This can either be:
+  // A string containing the direct URL of the resource you want to fetch.
+  // A Request object, effectively creating a copy.
 
   const response = await fetch(request);
   let pokeDex = await response.json();
+
+  // await pauzeert de executie van de function totdat de promise is ingelost.
+  // await vervangt als het ware .then()
 
   // generate cards
   generateBtn.addEventListener("click", (e) => {
@@ -103,7 +111,7 @@ function generateCard(pokeDex) {
     secondPokeDexType.classList.add("pokedex__type");
     secondPokeDexType.textContent = pokemonTypes[1];
 
-    if (!pokemonTypes[1]) {
+    if (pokemonTypes.length === 1) {
       secondPokeDexType.classList.add("hide");
     }
 
