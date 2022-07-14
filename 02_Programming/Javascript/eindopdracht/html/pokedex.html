@@ -13,20 +13,20 @@
     <div class="wrapper">
       <header>
         <img class="logo" src="../images/pokemon-logo.png" alt="" />
+        <form class="pokedex__form">
+          <select name="generation" id="generation">
+            <option value="1">Generation 1</option>
+            <option value="2">Generation 2</option>
+            <option value="3">Generation 3</option>
+            <option value="4">Generation 4</option>
+            <option value="5">Generation 5</option>
+            <option value="6">Generation 6</option>
+            <option value="7">Generation 7</option>
+          </select>
+          <button class="generate">Generate Pokedex!</button>
+          <button class="clear">clear</button>
+        </form>
       </header>
-      <form class="pokedex__form">
-        <select name="generation" id="generation">
-          <option value="1">Generation 1</option>
-          <option value="2">Generation 2</option>
-          <option value="3">Generation 3</option>
-          <option value="4">Generation 4</option>
-          <option value="5">Generation 5</option>
-          <option value="6">Generation 6</option>
-          <option value="7">Generation 7</option>
-        </select>
-        <button class="generate">Generate Pokedex!</button>
-        <button class="clear">clear</button>
-      </form>
 
       <section class="pokedex">
         <!-- container voor de dynamisch gegenereerde pokemon kaarten -->
