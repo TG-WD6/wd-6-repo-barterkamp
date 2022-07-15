@@ -1,6 +1,7 @@
 .comments-section {
   @include flex-center(column);
   min-height: 100vh;
+  margin-top: 10rem;
 }
 
 .comments {
