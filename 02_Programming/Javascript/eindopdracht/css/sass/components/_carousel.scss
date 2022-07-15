@@ -24,15 +24,6 @@ main {
   overflow: hidden;
   position: relative;
 
-  @media screen and (max-width: 450px) {
-    max-width: 300px;
-    height: 200px;
-  }
-
-  &__image {
-    max-width: 100%;
-  }
-
   &__slide {
     display: flex;
     height: 400px;

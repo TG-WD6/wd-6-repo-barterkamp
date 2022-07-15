@@ -322,15 +322,6 @@ main {
   overflow: hidden;
   position: relative;
 }
-@media screen and (max-width: 450px) {
-  .carousel {
-    max-width: 300px;
-    height: 200px;
-  }
-}
-.carousel__image {
-  max-width: 100%;
-}
 .carousel__slide {
   display: flex;
   height: 400px;
