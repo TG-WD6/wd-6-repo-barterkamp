@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/sass/main.css" />
+    <script src="../javascript/comments.js" defer></script>
+    <title>Comment section</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/index.html"
+        ><img src="/images/js-logo.png" alt="" class="navbar__logo"
+      /></a>
+      <ul class="navbar__list">
+        <li class="navbar__list-item">
+          <a href="./clock.html">clock</a>
+        </li>
+
+        <li class="navbar__list-item">
+          <a href="./pokedex.html">pokedex</a>
+        </li>
+
+        <li class="navbar__list-item">
+          <a href="./comments.html">comments</a>
+        </li>
+
+        <li class="navbar__list-item">
+          <a href="./carousel.html">carousel</a>
+        </li>
+
+        <li class="navbar__list-item">
+          <a href="./search.html">search</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="comments-section">
+      <div class="comments">
+        <ul class="comments__list">
+
+        <!-- list waar alle comments in gegenereerd worden -->
+
+        </ul>
+        <div class="comments__input-container">
+          <div class="comments__reply-container">
+            <p class="comments__reply-paragraph"></p>
+            <button class="comments__close-btn">X</button>
+          </div>
+          <form action="" class="comments__form">
+            <textarea
+              class="comments__txtinput"
+              name="comment"
+              rows="5"
+              placeholder="Leave a comment"
+              required
+            ></textarea>
+            
+              <input
+                type="text"
+                class="comments__sender"
+                name="comment__sender"
+                id="comments__sender"
+                placeholder="Your name"
+                required
+              />
+              <button type="submit" class="comments__submit-btn">Submit</button>
+            </p>
+            
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

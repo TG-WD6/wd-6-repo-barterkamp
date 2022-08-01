@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  padding: 1rem 3rem;
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 50px;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+  }
+
+  &__list-item {
+    color: #fff;
+
+    & a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+
+      &:hover {
+        color: #ffca28;
+      }
+    }
+  }
+}
+
+.background {
+  background-color: #ffca28;
+  height: 100vh;
+  @include flex-center(column);
+
+  & h1 {
+    font-family: "Fira Code", monospace;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 450px) {
+  }
+}
