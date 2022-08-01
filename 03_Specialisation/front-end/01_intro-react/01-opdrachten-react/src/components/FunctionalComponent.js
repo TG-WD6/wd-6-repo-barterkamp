@@ -6,7 +6,7 @@ function FunctionalComponent() {
 
   return (
     <div>
-      <h2>Functional component</h2>
+      <h2>Functional Component</h2>
       <form>
         <input
           type="text"
@@ -17,7 +17,7 @@ function FunctionalComponent() {
         />
       </form>
       <h3>Hello Function {input}</h3>
-      {/* De huidige value van input wordt achter het woord function geinjecteerd */}
+      {/* De huidige value van input wordt achter het woord */}
     </div>
   );
 }
