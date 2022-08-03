@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 8</title>
+
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        height: 150vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        position: relative;
+        width: 50%;
+      }
+
+      .container__heading {
+        background-color: yellow;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 90%;
+        height: 40px;
+      }
+
+      .container__subheading {
+        width: 50%;
+        background-color: #fff;
+        opacity: 0.8;
+        position: absolute;
+        top: 53%;
+        height: 20px;
+        margin-left: 20px;
+      }
+
+      .container__image {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .box {
+        width: 300px;
+        height: 40px;
+        background-color: yellow;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: -50px;
+        z-index: -1;
+      }
+
+      h1,
+      p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      h1 {
+        margin-left: 40px;
+      }
+
+      p {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="container__image"
+        src="/01_Fundamentals/04_css/images/snow.jpg"
+        alt="Brrrr"
+      />
+      <div class="container__heading">
+        <h1>Bbbrrrrrrr....</h1>
+      </div>
+      <div class="container__subheading">
+        <p>super koud hier zeg!</p>
+      </div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

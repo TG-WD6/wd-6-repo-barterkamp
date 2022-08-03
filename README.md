@@ -1,10 +1,8 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7862836&assignment_repo_type=AssignmentRepo)
 # Template Web Development
 
 Deze repository zal al je werk gedurende de opleiding bevatten. De inhoud is aan het begin genoeg voor de eerste maand - later ga je hier meer aan toevoegen. Zo wordt het een verslag van jouw leerpad.
 
 Een groot deel van de web development opdrachten zijn praktijkopdrachten, maar een aantal is ook theorie. De theorie-opdrachten mag je samen of apart in een .md bestand opslaan. Voor de praktijkopdrachten dien je bij elke opdracht een aparte file te gebruiken!
-
 
 ## Organisation is Key
 

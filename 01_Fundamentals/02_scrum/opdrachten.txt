@@ -1,0 +1,13 @@
+Opdracht 1: Welke vragen moet iedereen tijdens de Daily standup aan zichzelf stellen:
+
+1. Wat heb ik gister gedaan?
+2. Wat ga ik vandaag doen?
+3. Verwacht ik obstakels, en kan het team me daarbij helpen?
+
+Opdracht 2: Wat zit er in de Scrum Retrospective?
+
+1. Wat hebben we goed gedaan en moeten we bespreken zodat we het niet vergeten?
+2. Wat hebben we geleerd?
+3. Wat moeten we in de toekomst anders doen?
+4. Wat begrijpen we nog steeds niet?
+

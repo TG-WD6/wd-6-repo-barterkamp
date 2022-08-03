@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 4</title>
+
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .container {
+        border: 1px solid black;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      .container:hover .box {
+        transition-property: top, left, bottom, right;
+        transition-duration: 3s;
+        transition-timing-function: ease-in;
+      }
+
+      .container:hover .box.box1 {
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Please hover the container to view transition effects</h1>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+  </body>
+</html>

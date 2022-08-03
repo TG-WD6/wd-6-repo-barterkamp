@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 2</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+        border: none;
+        padding: 1rem 5rem;
+        background-color: green;
+      }
+
+      .btn {
+        position: relative;
+      }
+
+      .btn::before {
+        content: "";
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        background-color: green;
+        border-top: 10px solid orange;
+        border-left: 10px solid orange;
+        left: 0;
+      }
+
+      .btn::after {
+        content: "";
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        background-color: green;
+        border-bottom: 10px solid orange;
+        border-right: 10px solid orange;
+        left: 163px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <button>Button</button>
+    </div>
+  </body>
+</html>
