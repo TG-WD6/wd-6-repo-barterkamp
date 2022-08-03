@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="app">
       <h1>Oefenen met Class components & Functional components</h1>
+
       <FunctionalComponent />
       <ClassComponent />
     </div>

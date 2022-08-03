@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 
 class ClassComponent extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      input: "",
-    };
+  constructor({ props }) {
+    super(props);
   }
 
   render() {
     // onChangeHandler function
     const onChangeHandler = (e) => {
-      this.setState({ input: e.target.value });
+      this.props.setChange(e.target.value);
     };
 
     return (
@@ -21,11 +17,12 @@ class ClassComponent extends Component {
         <form>
           <input
             type="text"
+            value={this.props.change}
             onChange={onChangeHandler}
             // De setState heeft altijd een object nodig als parameter
           />
         </form>
-        <h3>Hello Class {this.state.input}</h3>
+        <h3>Hello Class {this.props.change}</h3>
         {/* zodra je iets in de input field typt wordt de oorspronkelijke state geupdated met de waarde uit setState */}
       </div>
     );
